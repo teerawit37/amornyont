@@ -59,9 +59,7 @@ export interface MyComponentProps {
     cate: string;
     id: string;
     title: string;
-    Characteristics: string;
-    Applications: string;
-    types: any;
+    rawHTML?: string;
 }
 
 const ProductCate = () => {
@@ -94,6 +92,8 @@ const ProductCate = () => {
                                 characteristics={item.Characteristics}
                                 title={item.title}
                                 cate={item.cate}
+                                type="Automotive Belt"
+                                rawHTML={item.rawHTML}
                             />
                         </div>
                     ))
@@ -105,6 +105,8 @@ const ProductCate = () => {
                                 characteristics={item.Characteristics}
                                 title={item.title}
                                 cate={item.cate}
+                                type="Industrial Belt"
+                                rawHTML={item.rawHTML}
                             />
                         </div>
                     ))

@@ -55,7 +55,7 @@ const ContactItem = styled.div`
 const Button = styled.a`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 9px 16px;
   width: 100%;
