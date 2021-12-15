@@ -78,7 +78,7 @@ const ImageContent2 = styled.div`
   margin-bottom: 40px;
 `
 
-const WhoContent = () => {
+const BlockContent = () => {
   return (
     <div className="container">
       <div className="d-flex">
@@ -125,4 +125,4 @@ const WhoContent = () => {
   );
 }
 
-export default memo(WhoContent);
+export default memo(BlockContent);

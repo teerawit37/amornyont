@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import styled from '@emotion/styled';
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -109,19 +109,38 @@ const Card = ({
         </Modal.Header>
         <Modal.Body>
           <ModalContainer>
-            <div className="row">
-              <div className="col-6">
+            <div className=" d-block d-md-none">
+              <div className="row">
                 <ModalTitle>{title}</ModalTitle>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: rawHTML
-                  }}></div>
+                <div className="col-12 mb-4">
+                  <Image
+                    alt={`${id}`}
+                    src={`/assets/images/product/${cate}/${id}.png`}
+                  />
+                </div>
+                <div className="col-12">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: rawHTML
+                    }}></div>
+                </div>
               </div>
-              <div className="col-6">
-                <Image
-                  alt={`${id}`}
-                  src={`/assets/images/product/${cate}/${id}.png`}
-                />
+            </div>
+            <div className=" d-none d-md-block">
+              <div className="row">
+                <div className="col-6">
+                  <ModalTitle>{title}</ModalTitle>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: rawHTML
+                    }}></div>
+                </div>
+                <div className="col-6">
+                  <Image
+                    alt={`${id}`}
+                    src={`/assets/images/product/${cate}/${id}.png`}
+                  />
+                </div>
               </div>
             </div>
           </ModalContainer>

@@ -1,6 +1,7 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
 import { NavBar } from "../NavBar";
+import { SubNavBar } from "../SubNavBar";
 import { Footer } from '../Footer';
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -14,6 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <NavBar />
+      <SubNavBar />
       {children}
       <Footer />
     </>
