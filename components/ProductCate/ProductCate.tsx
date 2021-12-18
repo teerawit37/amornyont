@@ -2,7 +2,8 @@ import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import productcate1 from '../../public/assets/images/product-cate-1.png';
-import productcate2 from '../../public/assets/images/product-cate-2.png'
+import productcate2 from '../../public/assets/images/product-cate-2.png';
+import { Overlay } from "../Overlay";
 import { useRouter } from "next/router";
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
@@ -114,6 +115,7 @@ const ProductCate = () => {
     <>
       <CateContainer>
         <BG1>
+          <Overlay />
           <Image
             alt="product-cate-1"
             src={productcate1}
@@ -131,6 +133,7 @@ const ProductCate = () => {
           </TextHero>
         </BG1>
         <BG2>
+          <Overlay />
           <Image
             alt="product-cate-2"
             src={productcate2}

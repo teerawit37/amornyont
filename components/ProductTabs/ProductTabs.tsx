@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 import { css, jsx } from '@emotion/react'
 import productData from '../../data/product.json';
 import { Card } from "../Card";
+import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -66,6 +69,9 @@ const ProductCate = () => {
     const [autoData, setAutoData] = useState<MyComponentProps[]>([]);
     const [industData, setIndustData] = useState<MyComponentProps[]>([]);
     const [tabs, setActiveTabs] = useState<string>('1');
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'en' ? en : th;
     useEffect(() => {
         if (productData) {
             setAutoData(productData.automotive);
@@ -80,8 +86,8 @@ const ProductCate = () => {
     return (
         <TabsContainer>
             <Tabs>
-                <TabItem onClick={() => handleActiveTabs('1')}>Automotive Belt</TabItem>
-                <TabItem onClick={() => handleActiveTabs('2')}>Industrial Belt</TabItem>
+                <TabItem onClick={() => handleActiveTabs('1')}>{t.product.autoBelt}</TabItem>
+                <TabItem onClick={() => handleActiveTabs('2')}>{t.product.industBelt}</TabItem>
             </Tabs>
             <div className="row">
                 {tabs === '1' ?

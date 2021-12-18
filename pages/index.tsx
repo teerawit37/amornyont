@@ -17,6 +17,7 @@ import amornyontwhite from '../public/assets/images/amornyont-logo-white.png'
 import mitsuboshicolor from '../public/assets/images/mitsuboshi-color.png'
 import { ProductBanner } from '../components/ProductBanner';
 import { ProductCate } from '../components/ProductCate';
+import { Overlay } from '../components/Overlay';
 const breakpoints = [375, 768, 1024, 1440]
 
 const mq = breakpoints.map(
@@ -42,7 +43,7 @@ const HeroSection = styled.section`
     }
 `
 const HeroBG = styled.div`
-  position: relative;;
+  position: relative;
   height: 100%;
   width: 100vw;
   overflow: hidden;
@@ -245,6 +246,7 @@ const Home: NextPage = () => {
     <>
       <HeroSection>
         <HeroBG>
+          <Overlay />
           <Image
             alt="hero-bg-1"
             src={herobg1}
@@ -275,6 +277,7 @@ const Home: NextPage = () => {
       </HeroSection>
       <WhySection>
         <HeroBG>
+          <Overlay />
           <Image
             alt="hero-bg-2"
             src={herobg2}

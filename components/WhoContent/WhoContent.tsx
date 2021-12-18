@@ -2,7 +2,11 @@ import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import who1 from '../../public/assets/images/who-1.png';
-import who2 from '../../public/assets/images/who-2.png'
+import who2 from '../../public/assets/images/who-2.png';
+import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
+
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -79,12 +83,15 @@ const ImageContent2 = styled.div`
 `
 
 const BlockContent = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
   return (
     <div className="container">
       <div className="d-flex">
       <ContentContainer>
-        <Title>Mitsuboshi Premier Distributor opened the brand-new website.</Title>
-        <SubTitle>{`We, AMORNYONT, are delighted to present our partner and customer a brand-new website - www.amornyont.com - as a new channel of communication. Please feel free to browse and don't hesitate to let us . . .`}</SubTitle>
+        <Title>{t.whoweare.title}</Title>
+        <SubTitle>{t.whoweare.subtitle}</SubTitle>
         <div className="row">
           <div className="col-12 col-lg-6">
             <ImageContent1>
@@ -99,8 +106,8 @@ const BlockContent = () => {
             </ImageContent1>
           </div>
           <div className="col-12 col-lg-6">
-            <TextContent>Use wide color to enhance the visual experience on compatible displays. Wide color displays support a P3 color space, which can produce richer, more saturated colors than sRGB. As a result, photos and videos that use wide color are more lifelike, and visual data and status indicators that use wide color are more impactful. When appropriate, use the Display P3 color profile at 16 bits per pixel (per channel) and export images in PNG format. Note that a wide color display is needed to design wide color images and select P3 colors.</TextContent>
-            <TextContent>Provide color space-specific image and color variations when the experience calls for it. In general, P3 colors and images tend to appear as expected on sRGB devices. Occasionally, however, it may be hard to differentiate between two very similar P3 colors when they’re viewed in sRGB. Gradients that use colors in the P3 spectrum can also sometimes appear clipped on sRGB devices. To avoid these issues, you can provide distinct images and colors in the asset catalog of your Xcode project to ensure visual fidelity on both wide color and sRGB devices.</TextContent>
+            <TextContent>{t.whoweare.p1}</TextContent>
+            <TextContent>{t.whoweare.p2}</TextContent>
           </div>
           <div className="col-12">
             <ImageContent2>
@@ -115,8 +122,8 @@ const BlockContent = () => {
             </ImageContent2>
           </div>
           <div className="col-12">
-            <TextContent>Use wide color to enhance the visual experience on compatible displays. Wide color displays support a P3 color space, which can produce richer, more saturated colors than sRGB. As a result, photos and videos that use wide color are more lifelike, and visual data and status indicators that use wide color are more impactful. When appropriate, use the Display P3 color profile at 16 bits per pixel (per channel) and export images in PNG format. Note that a wide color display is needed to design wide color images and select P3 colors.</TextContent>
-            <TextContent>Provide color space-specific image and color variations when the experience calls for it. In general, P3 colors and images tend to appear as expected on sRGB devices. Occasionally, however, it may be hard to differentiate between two very similar P3 colors when they’re viewed in sRGB. Gradients that use colors in the P3 spectrum can also sometimes appear clipped on sRGB devices. To avoid these issues, you can provide distinct images and colors in the asset catalog of your Xcode project to ensure visual fidelity on both wide color and sRGB devices.</TextContent>
+            <TextContent>{t.whoweare.p3}</TextContent>
+            <TextContent>{t.whoweare.p4}</TextContent>
           </div>
         </div>
       </ContentContainer>

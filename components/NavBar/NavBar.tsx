@@ -98,7 +98,8 @@ const NavBar = () => {
 
   const changeLanguage = (lang: string) => {
     const locale = lang;
-    router.push('/', '/', {locale})
+    const path = locale + router.pathname
+    router.replace(path, path, { locale })
   }
   return (
     <>

@@ -1,7 +1,8 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import productbanner from '../../public/assets/images/product-banner-1.png'
+import productbanner from '../../public/assets/images/product-banner-1.png';
+import { Overlay } from "../Overlay";
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -66,6 +67,7 @@ const ProductBanner = () => {
     <>
       <BannerContainer>
         <BG>
+          <Overlay />
           <Image
             alt="product-banner"
             src={productbanner}
