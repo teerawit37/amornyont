@@ -1,5 +1,8 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
+import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -50,17 +53,20 @@ const Copyright = styled.div`
 `
 
 const Footer = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
     return (
         <>
             <FooterContainer>
                 <FooterLink>
-                    <Link href="" target="_blank" rel="noreferrer">OUR PRODUCTS</Link>
-                    <Link href="" target="_blank" rel="noreferrer">WHO WE ARE</Link>
-                    <Link href="" target="_blank" rel="noreferrer">TALK TO YOU</Link>
-                    <Link href="" target="_blank" rel="noreferrer">CONTACT US</Link>
+                    <Link href="" target="_blank" rel="noreferrer">{t.footer.product}</Link>
+                    <Link href="" target="_blank" rel="noreferrer">{t.footer.weare}</Link>
+                    <Link href="" target="_blank" rel="noreferrer">{t.footer.talk}</Link>
+                    <Link href="" target="_blank" rel="noreferrer">{t.footer.contact}</Link>
                 </FooterLink>
                 <Copyright>
-                  Copyright © 2021 Amornyont. All rights reserved.
+                  {t.footer.copyright}
                 </Copyright>
             </FooterContainer>
         </>

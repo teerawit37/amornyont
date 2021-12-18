@@ -4,6 +4,8 @@ import Image from 'next/image';
 import productcate1 from '../../public/assets/images/product-cate-1.png';
 import productcate2 from '../../public/assets/images/product-cate-2.png'
 import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -101,7 +103,10 @@ const TextContainer = styled.div`
 
 
 const ProductCate = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
+
   const handleClick = (path: string) => {
     router.push(path)
   }
@@ -120,8 +125,8 @@ const ProductCate = () => {
           />
           <TextHero>
             <TextContainer>
-              <div>AUTOMOTIVE BELT</div>
-              <Button onClick={() => handleClick('/product')}>VIEW MORE</Button>
+              <div>{t.productCate.autoBelt}</div>
+              <Button onClick={() => handleClick('/product')}>{t.productCate.btnMore}</Button>
             </TextContainer>
           </TextHero>
         </BG1>
@@ -137,8 +142,8 @@ const ProductCate = () => {
           />
           <TextHero>
             <TextContainer>
-              <div>INDUSTRIAL BELT</div>
-              <Button onClick={() => handleClick('/product')}>VIEW MORE</Button>
+              <div>{t.productCate.industBelt}</div>
+              <Button onClick={() => handleClick('/product')}>{t.productCate.btnMore}</Button>
             </TextContainer>
           </TextHero>
         </BG2>

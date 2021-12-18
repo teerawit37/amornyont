@@ -1,8 +1,12 @@
-import { memo, useState } from "react";
+import { memo, useContext, useState } from "react";
 import Image from 'next/image';
 import styled from '@emotion/styled';
+import { useTranslation } from 'react-i18next';
 import logo from '../../public/assets/images/amornyont-logo.png'
 import icon from '../../public/assets/icons/menu.png'
+import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -69,8 +73,33 @@ const LinkContainer = styled.div`
   z-index: 100;
 `
 
+const ChangeLangButton = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+	color: inherit;
+	border: none;
+`
+const SpaceButton = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
 const NavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
+
+  const changeLanguage = (lang: string) => {
+    const locale = lang;
+    router.push('/', '/', {locale})
+  }
   return (
     <>
       <Nav>
@@ -98,19 +127,21 @@ const NavBar = () => {
         </NavBtn>
 
         <NavLink>
-          <Link href="/product" rel="noreferrer">OUR PRODUCTS</Link>
-          <Link href="/whoweare" rel="noreferrer">WHO WE ARE</Link>
-          <Link href="/talktoyou" rel="noreferrer">TALK TO YOU</Link>
-          <Link href="/contactus" rel="noreferrer">CONTACT US</Link>
-          <Link href="" rel="noreferrer">TH | EN</Link>
+          <Link href="/product" rel="noreferrer">{t.navbar.product}</Link>
+          <Link href="/whoweare" rel="noreferrer">{t.navbar.weare}</Link>
+          <Link href="/talktoyou" rel="noreferrer">{t.navbar.talk}</Link>
+          <Link href="/contactus" rel="noreferrer">{t.navbar.contact}</Link>
+          <ChangeLangButton onClick={() => changeLanguage('th')}>{t.navbar.btnTH}</ChangeLangButton>
+          <SpaceButton>|</SpaceButton>
+          <ChangeLangButton onClick={() => changeLanguage('en')}>{t.navbar.btnEN}</ChangeLangButton>
         </NavLink>
       </Nav>
       {menu &&
         <LinkContainer>
-          <Link href="/product" rel="noreferrer">OUR PRODUCTS</Link>
-          <Link href="/whoweare" rel="noreferrer">WHO WE ARE</Link>
-          <Link href="/talktoyou" rel="noreferrer">TALK TO YOU</Link>
-          <Link href="/contactus" rel="noreferrer">CONTACT US</Link>
+          <Link href="/product" rel="noreferrer">{t.navbar.product}</Link>
+          <Link href="/whoweare" rel="noreferrer">{t.navbar.weare}</Link>
+          <Link href="/talktoyou" rel="noreferrer">{t.navbar.talk}</Link>
+          <Link href="/contactus" rel="noreferrer">{t.navbar.contact}</Link>
         </LinkContainer>
       }
     </>

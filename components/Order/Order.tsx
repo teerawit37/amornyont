@@ -1,7 +1,10 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
-import herobg3 from '../../public/assets/images/bg-hero-3.png'
+import herobg3 from '../../public/assets/images/bg-hero-3.png';
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
+import { useRouter } from "next/router";
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -74,7 +77,7 @@ const Button = styled.a`
 const LineButton = styled.a`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 9px 16px;
   width: 100%;
@@ -103,6 +106,9 @@ const Img = styled.img`
 `
 
 const Order = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
   return (
     <>
       <OrderSection>
@@ -116,8 +122,8 @@ const Order = () => {
             quality={100}
           />
           <HeroShowCase>
-            <Title>QUICK ORDER</Title>
-            <div>24/7 advice service</div>
+            <Title>{t.order.title}</Title>
+            <div>{t.order.subtitle}</div>
             <div className="container">
               <ContactContainer>
                 <ContactItem>
@@ -126,7 +132,7 @@ const Order = () => {
                     src="/assets/icons/line.png"
                   />
                   <LineButton href="http://line.me/ti/p/@amornyont">
-                    Add: @amornyont
+                  {t.order.line}
                   </LineButton>
                 </ContactItem>
                 <ContactItem>
@@ -135,7 +141,7 @@ const Order = () => {
                     src="/assets/icons/call.png"
                   />
                   <Button href="tel:02-224-2247">
-                    Call: 02-224-2247
+                  {t.order.call}
                   </Button> 
                 </ContactItem>
                 <ContactItem>
@@ -144,7 +150,7 @@ const Order = () => {
                     src="/assets/icons/mail.png"
                   />
                     <Button href="mailto: sales@amornyont.com">
-                      Send: sales@amornyont.com
+                    {t.order.mail}
                     </Button>
                 </ContactItem>
               </ContactContainer>

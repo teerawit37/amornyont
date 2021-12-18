@@ -1,5 +1,7 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 import { useRouter } from 'next/router'
+import en from '../public/locales/en';
+import th from '../public/locales/th';
 import styles from '../styles/Home.module.css'
 import styled from '@emotion/styled';
 import { Address } from '../components/Address';
@@ -232,7 +234,10 @@ const Button = styled.div`
 `
 
 const Home: NextPage = () => {
-  const router = useRouter()
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th
+
   const handleClick = (path: string) => {
     router.push(path)
   }
@@ -260,10 +265,10 @@ const Home: NextPage = () => {
                   quality={100}
                 />
               </LogoWhite>
-              <TextHero>TRUE EXPERTISE IN AUTOMOTIVE</TextHero>
-              <TextHero>& INDUSTRIAL BELTS</TextHero>
-              <TextHeroDesc>At Amornyont, a leading MITSUBOSHI (Japan) belts distributor, we offer full range of belts including automotive, industrial and agriculture belts.</TextHeroDesc>
-              <Button onClick={() => handleClick('/product')}>SEE HOW WE DO IT</Button>
+              <TextHero>{t.home.heroTitle1}</TextHero>
+              <TextHero>{t.home.heroTitle2}</TextHero>
+              <TextHeroDesc>{t.home.heroDesc}</TextHeroDesc>
+              <Button onClick={() => handleClick('/product')}>{t.home.btnSeeHow}</Button>
             </AbsoluteContainer>
           </HeroShowCase>
         </HeroBG>

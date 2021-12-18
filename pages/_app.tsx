@@ -3,8 +3,15 @@ import type { AppProps } from 'next/app'
 import { Layout } from '../components/Layout'
 import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { appWithTranslation } from 'next-i18next';
+import en from '../public/locales/en';
+import th from '../public/locales/th';
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th
   return (
     <>
       <Head>
@@ -21,4 +28,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

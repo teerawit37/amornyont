@@ -1,5 +1,8 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
+import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -30,14 +33,14 @@ const AddressContainer = styled.div`
     }
 `
 const H5 = styled.h5`
-  font-size: 22px;
+  font-size: 20px;
   line-height: 36px;
   font-weight: 600;
   color: #000000;
   margin-block-start: 1em;
   margin-block-end: 1em;
   ${mq[3]} {
-    font-size: 30px;
+    font-size: 28px;
     }
 `
 
@@ -67,16 +70,19 @@ const Desc = styled.div`
 
 
 const Address = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
   return (
     <>
-      <H5>Amornyont Limited Part</H5>
+      <H5>{t.address.title}</H5>
       <AddressContainer>
         <AddressContext>
-          <AddressRow><AdresssTitle>Address:</AdresssTitle><Desc>1506 Krungkasem Road, Pom Prap, Pom Prap Sattru Phai, Bangkok 10100, Thailand.</Desc></AddressRow>
-          <AddressRow><AdresssTitle>Line ID:</AdresssTitle><Desc>@amornyont</Desc></AddressRow>
-          <AddressRow><AdresssTitle>Tel:</AdresssTitle><Desc>02-224-2247</Desc></AddressRow>
-          <AddressRow><AdresssTitle>Fax:</AdresssTitle><Desc>02-224-2433</Desc></AddressRow>
-          <AddressRow><AdresssTitle>Email:</AdresssTitle><Desc>sales@amornyont.com</Desc></AddressRow>
+          <AddressRow><AdresssTitle>{t.address.addressTitle}</AdresssTitle><Desc>{t.address.address}</Desc></AddressRow>
+          <AddressRow><AdresssTitle>{t.address.lineTitle}</AdresssTitle><Desc>{t.address.line}</Desc></AddressRow>
+          <AddressRow><AdresssTitle>{t.address.callTitle}</AdresssTitle><Desc>{t.address.call}</Desc></AddressRow>
+          <AddressRow><AdresssTitle>{t.address.faxTitle}</AdresssTitle><Desc>{t.address.fax}</Desc></AddressRow>
+          <AddressRow><AdresssTitle>{t.address.mailTitle}</AdresssTitle><Desc>{t.address.mail}</Desc></AddressRow>
         </AddressContext>
       </AddressContainer>
     </>
