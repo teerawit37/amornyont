@@ -96,10 +96,10 @@ const ProductCate = () => {
                             <Card
                                 id={item.id}
                                 characteristics={item.Characteristics}
-                                title={item.title}
+                                title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
                                 type="Automotive Belt"
-                                rawHTML={item.rawHTML}
+                                rawHTML={locale === 'en' ? item.rawHTML : item.rawHTMLth}
                             />
                         </div>
                     ))
@@ -109,10 +109,10 @@ const ProductCate = () => {
                             <Card
                                 id={item.id}
                                 characteristics={item.Characteristics}
-                                title={item.title}
+                                title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
                                 type="Industrial Belt"
-                                rawHTML={item.rawHTML}
+                                rawHTML={locale === 'en' ? item.rawHTML : item.rawHTMLth}
                             />
                         </div>
                     ))

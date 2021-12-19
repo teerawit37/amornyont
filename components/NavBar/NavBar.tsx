@@ -1,8 +1,9 @@
-import { memo, useContext, useState } from "react";
+import { memo, useContext, useEffect, useState } from "react";
 import Image from 'next/image';
 import styled from '@emotion/styled';
 import { useTranslation } from 'react-i18next';
 import logo from '../../public/assets/images/amornyont-logo.png'
+import logoMB from '../../public/assets/images/amornyont-logo-mb.png'
 import icon from '../../public/assets/icons/menu.png'
 import { useRouter } from "next/router";
 import en from '../../public/locales/en';
@@ -34,7 +35,6 @@ const NavHeader = styled.div`
 const NavBtn = styled.div`
   display: flex;
   justify-content: flex-end;
-  flex: 2;
   ${mq[2]} {
     display: none;
   }
@@ -90,6 +90,29 @@ const SpaceButton = styled.div`
   align-items: center;
 `
 
+const HotLineContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 16px;
+  ${mq[2]} {
+    display: none;
+  }
+`
+const HotLineText = styled.div`
+  font-size: 12px;
+  line-height: 20px;
+  color: #4F5450;
+`
+const HotLineTextB = styled.div`
+font-size: 12px;
+font-weight: 600;
+line-height: 20px;
+color: #4F5450;
+`
+
 const NavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   const router = useRouter();
@@ -105,7 +128,17 @@ const NavBar = () => {
     <>
       <Nav>
         <NavHeader>
-          <Link href="/" rel="noreferrer">
+          <Link href="/" rel="noreferrer" className="d-block d-lg-none">
+            <Image
+              alt="logo"
+              src={logoMB}
+              quality={100}
+              placeholder="blur"
+              width={57}
+              height={37}
+            />
+          </Link>
+          <Link href="/" rel="noreferrer" className="d-none d-lg-block">
             <Image
               alt="logo"
               src={logo}
@@ -116,6 +149,7 @@ const NavBar = () => {
             />
           </Link>
         </NavHeader>
+        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText>02-224-2247</HotLineText></HotLineContainer>
         <NavBtn>
           <MenuIcon
             alt="menu"

@@ -89,6 +89,7 @@ const AddressSection = styled.section`
   background-color: white;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #D3D4D3;
   ${mq[3]} {
     height: 451px;
     }

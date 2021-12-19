@@ -4,6 +4,9 @@ import { TalkBanner } from '../../components/PageBanner';
 import { Address } from '../../components/Address';
 import blogData from '../../data/blog.json';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -24,6 +27,7 @@ const AddressSection = styled.section`
   background-color: white;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #D3D4D3;
   ${mq[3]} {
     height: 451px;
     }
@@ -40,6 +44,9 @@ export interface MyComponentProps {
 }
 
 const TalkToYou: NextPage = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th
   const [blog, setBlog] = useState<MyComponentProps[]>([]);
     useEffect(() => {
         if (blogData) {
@@ -49,7 +56,7 @@ const TalkToYou: NextPage = () => {
 
   return (
     <>
-      <TalkBanner text="TALK TO YOU" />
+      <TalkBanner text={t.navbar.talk} />
       {blog.map((item, index) => (
         <a key={index} href={`/talktoyou/${item.id}`}>{item.id}</a>
       ))}

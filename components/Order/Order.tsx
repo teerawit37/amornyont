@@ -22,6 +22,16 @@ const OrderSection = styled.section`
     height: 600px;
     }
 `
+const OrderSectionW = styled.section`
+  display: flex;
+  height: 367px;
+  width: 100%;
+  background: #F2F2F2;
+  ${mq[3]} {
+    height: 600px;
+    }
+`
+
 const HeroBG = styled.div`
   position: relative;;
   height: 100%;
@@ -39,6 +49,17 @@ const HeroShowCase = styled.div`
   width: 100%;
   text-align: center;
   color: white;
+`
+
+const HeroShowCaseW = styled.div`
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: bloack;
 `
 
 const ContactContainer = styled.div`
@@ -104,24 +125,70 @@ const Img = styled.img`
   height: 44px;
   margin-right: 5px;
 `
+export interface MyComponentProps {
+  page?: string;
+}
 
-const Order = () => {
+const Order = ({
+  page = 'home',
+}: MyComponentProps) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : th;
   return (
     <>
-      <OrderSection>
+      {page === 'home' ?
+        <OrderSection>
+          <HeroBG>
+            <Image
+              alt="hero-bg-3"
+              src={herobg3}
+              placeholder="blur"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
+            <HeroShowCase>
+              <Title>{t.order.title}</Title>
+              <div>{t.order.subtitle}</div>
+              <div className="container">
+                <ContactContainer>
+                  <ContactItem>
+                    <Img
+                      alt="line"
+                      src="/assets/icons/line.png"
+                    />
+                    <LineButton href="http://line.me/ti/p/@amornyont">
+                      {t.order.line}
+                    </LineButton>
+                  </ContactItem>
+                  <ContactItem>
+                    <Img
+                      alt="call"
+                      src="/assets/icons/call.png"
+                    />
+                    <Button href="tel:02-224-2247">
+                      {t.order.call}
+                    </Button>
+                  </ContactItem>
+                  <ContactItem>
+                    <Img
+                      alt="mail"
+                      src="/assets/icons/mail.png"
+                    />
+                    <Button href="mailto: sales@amornyont.com">
+                      {t.order.mail}
+                    </Button>
+                  </ContactItem>
+                </ContactContainer>
+              </div>
+            </HeroShowCase>
+          </HeroBG>
+        </OrderSection>
+        :
+        <OrderSectionW>
         <HeroBG>
-          <Image
-            alt="hero-bg-3"
-            src={herobg3}
-            placeholder="blur"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-          <HeroShowCase>
+          <HeroShowCaseW>
             <Title>{t.order.title}</Title>
             <div>{t.order.subtitle}</div>
             <div className="container">
@@ -132,7 +199,7 @@ const Order = () => {
                     src="/assets/icons/line.png"
                   />
                   <LineButton href="http://line.me/ti/p/@amornyont">
-                  {t.order.line}
+                    {t.order.line}
                   </LineButton>
                 </ContactItem>
                 <ContactItem>
@@ -141,23 +208,24 @@ const Order = () => {
                     src="/assets/icons/call.png"
                   />
                   <Button href="tel:02-224-2247">
-                  {t.order.call}
-                  </Button> 
+                    {t.order.call}
+                  </Button>
                 </ContactItem>
                 <ContactItem>
                   <Img
                     alt="mail"
                     src="/assets/icons/mail.png"
                   />
-                    <Button href="mailto: sales@amornyont.com">
+                  <Button href="mailto: sales@amornyont.com">
                     {t.order.mail}
-                    </Button>
+                  </Button>
                 </ContactItem>
               </ContactContainer>
             </div>
-          </HeroShowCase>
+          </HeroShowCaseW>
         </HeroBG>
-      </OrderSection>
+      </OrderSectionW>
+      }
     </>
   );
 }

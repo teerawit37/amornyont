@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 import { ProductBanner } from '../../components/PageBanner';
 import { ProductTabs } from '../../components/ProductTabs';
 import { Order } from '../../components/Order';
+import { useRouter } from 'next/router'
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -20,13 +23,16 @@ const Container = styled.div`
 `
 
 const Product: NextPage = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th
   return (
     <>
-      <ProductBanner text="PRODUCT" />
+      <ProductBanner text={t.navbar.product} />
       <div className="container">
         <ProductTabs />
       </div>
-      <Order />
+      <Order page='product' />
     </>
   )
 }

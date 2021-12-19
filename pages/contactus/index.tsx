@@ -2,6 +2,9 @@ import type { NextPage } from 'next'
 import styled from '@emotion/styled';
 import { ContactBanner } from '../../components/PageBanner';
 import { Address } from '../../components/Address';
+import { useRouter } from 'next/router'
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -23,15 +26,19 @@ const AddressSection = styled.section`
   background-color: white;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #D3D4D3;
   ${mq[3]} {
     height: 451px;
     }
 `
 
 const ContactUS: NextPage = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th
   return (
     <>
-      <ContactBanner text="CONTACT US" />
+      <ContactBanner text={t.navbar.contact} />
       <AddressSection>
         <div className="container">
           <Container>

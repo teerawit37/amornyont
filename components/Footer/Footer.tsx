@@ -19,7 +19,7 @@ const FooterContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #D3D4D3;
+  // border-top: 1px solid #D3D4D3;
   ${mq[2]} {
     padding: 14px 24px;
     }

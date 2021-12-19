@@ -35,6 +35,7 @@ const NavLink = styled.div`
   display: flex;
   flex:2;
   justify-content: flex-end;
+  align-items: center;
   font-size: 16px;
   }
 `
@@ -51,9 +52,12 @@ const LogoContainer = styled.div`
 `
 
 const Text = styled.div`
-  display: inline-block;
+  display: none;
   padding: 13px 10px 13px 10px;
   color: #FFF;
+  ${mq[2]} {
+    display: inline-block;
+    }
 `
 
 const LogoEn = styled.div`
@@ -92,6 +96,18 @@ const LinkContainer = styled.div`
   z-index: 100;
 `
 
+const IconContainer = styled.a`
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  cursor: pointer;
+`
+
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`
+
 const SubNavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   return (
@@ -122,7 +138,32 @@ const SubNavBar = () => {
         </NavHeader>
 
         <NavLink>
-          <Text>HOTLINE 02-224-2247</Text>
+          <Text>HOTLINE 02-224-2247 </Text>
+          <Text>|</Text>
+          <IconContainer href="http://line.me/ti/p/@amornyont">
+            <Img
+              alt="line"
+              src="/assets/icons/Contact_Icon-line.png"
+            />
+          </IconContainer>
+          <IconContainer href="tel:02-224-2247">
+            <Img
+              alt="call"
+              src="/assets/icons/Contact_Icon-call.png"
+            />
+          </IconContainer>
+          <IconContainer href="mailto: sales@amornyont.com">
+            <Img
+              alt="mail"
+              src="/assets/icons/Contact_Icon-mail.png"
+            />
+          </IconContainer>
+          <IconContainer>
+            <Img
+              alt="fax"
+              src="/assets/icons/Contact_Icon-fax.png"
+            />
+          </IconContainer>
         </NavLink>
       </Nav>
     </>
