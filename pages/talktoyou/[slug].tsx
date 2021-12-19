@@ -34,7 +34,7 @@ const TalkToYou: NextPage = () => {
   return (
     <>
       <TalkBanner text="" />
-      <BlogContent />
+      {/* <BlogContent /> */}
       <AddressSection>
         <div className="container">
           <Container>
