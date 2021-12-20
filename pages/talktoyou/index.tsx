@@ -41,7 +41,7 @@ const Readmore = styled.a`
 `
 
 const Card = styled.div`
-  height: 589px;
+  height: 402px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
   background-color: white;
@@ -49,6 +49,9 @@ const Card = styled.div`
   border: 1px solid white;
   margin-top: 16px;
   overflow: hidden;
+  ${mq[2]} {
+    height: 589px;
+    }
 `
 const DivContainer = styled.div`
   display: flex;
@@ -57,9 +60,22 @@ const DivContainer = styled.div`
   flex: 1;
 `
 
+const Title = styled.div`
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+`
+const Desc = styled.div`
+  font-size: 14px;
+  line-height: 22px;
+`
+
 const Img = styled.img`
   width: 100%;
-  height: 415px;
+  height: 215px;
+  ${mq[2]} {
+    height: 415px;
+    }
 `
 
 const ContentContainer = styled.div`
@@ -74,11 +90,11 @@ const ContentContainer = styled.div`
 export interface MyComponentProps {
   id: string;
   title: string;
-  subtitle: string;
-  paragraph1: string;
-  paragraph2: string;
-  paragraph3: string;
-  paragraph4: string;
+  titleTh: string;
+  desc: string;
+  descTh: string;
+  content: string;
+  contentTh: string;
 }
 
 const TalkToYou: NextPage = () => {
@@ -99,7 +115,7 @@ const TalkToYou: NextPage = () => {
         <div className="d-flex w-100">
           <DivContainer className="row">
             {blog.map((item, index) => (
-              <div key={index} className="col-12 col-lg-6">
+              <div key={index} className="col-12 col-md-6">
                 <Card>
                   <Img
                     alt={`${item.id}`}
@@ -107,8 +123,8 @@ const TalkToYou: NextPage = () => {
                   />
                   <ContentContainer>
                     <div>
-                      <div>title</div>
-                      <div>subtitle</div>
+                      <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
+                      <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
                     </div>
                     <Readmore href={`/talktoyou/${item.id}`}>Read more</Readmore>
                   </ContentContainer>
