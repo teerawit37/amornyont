@@ -123,11 +123,13 @@ const NavBar = () => {
     const locale = 'en';
     if(query.slug !== undefined && router.pathname.search('[slug]')){
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
-      const path = '/' + locale + result_path + query.slug
-      router.push(path)
+      const path = result_path + query.slug
+      router.push(path, path, { locale: 'en' })
+      // router.push(path)
     }else {
-      const path = '/' + locale + router.pathname
-      router.push(path)
+      const path = router.pathname
+      router.push(path, path, { locale: 'en' })
+      // router.push(path)
     }
   }
 
@@ -136,10 +138,13 @@ const NavBar = () => {
     if(query.slug !== undefined && router.pathname.search('[slug]')){
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
       const path = result_path + query.slug
-      router.push(path)
+      router.push(path, path, { locale: 'th' })
+      // router.push(path)
     }else {
       const path = router.pathname
       router.push(path)
+      router.push(path, path, { locale: 'th' })
+      
     }
   }
   return (
