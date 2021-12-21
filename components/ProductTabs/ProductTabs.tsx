@@ -58,6 +58,11 @@ const TabItem = styled.div`
   }
 `
 
+const Vi = styled.div`
+  border-left: 1px solid #D3D4D3;
+  height: 40px;
+`
+
 export interface MyComponentProps {
     cate: string;
     id: string;
@@ -86,8 +91,11 @@ const ProductCate = () => {
     return (
         <TabsContainer>
             <Tabs>
-                <TabItem onClick={() => handleActiveTabs('1')}>{t.product.autoBelt}</TabItem>
-                <TabItem onClick={() => handleActiveTabs('2')}>{t.product.industBelt}</TabItem>
+                <TabItem className={tabs === '1' ? 'active' : ''} onClick={() => handleActiveTabs('1')}>{t.product.autoBelt}</TabItem>
+                <div className="d-flex align-items-center">
+                    <Vi />
+                </div>
+                <TabItem className={tabs === '2' ? 'active' : ''} onClick={() => handleActiveTabs('2')}>{t.product.industBelt}</TabItem>
             </Tabs>
             <div className="row">
                 {tabs === '1' ?

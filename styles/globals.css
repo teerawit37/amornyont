@@ -25,3 +25,13 @@ td {
   border: 1px solid black;
   border-width: 1px !important;
 }
+
+.active {
+  cursor: pointer;
+  color: #008837 !important;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #008837 !important;
+}

@@ -61,10 +61,10 @@ const Footer = () => {
     <>
       <FooterContainer>
         <FooterLink>
-          <Link href="/product" locale={locale}><LinkA>{t.footer.product}</LinkA></Link>
-          <Link href="/whoweare" locale={locale}><LinkA>{t.footer.weare}</LinkA></Link>
-          <Link href="/talktoyou" locale={locale}><LinkA>{t.footer.talk}</LinkA></Link>
-          <Link href="/contactus" locale={locale}><LinkA>{t.footer.contact}</LinkA></Link>
+          <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.footer.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.footer.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.footer.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.footer.contact}</LinkA></Link>
         </FooterLink>
         <Copyright>
           {t.footer.copyright}

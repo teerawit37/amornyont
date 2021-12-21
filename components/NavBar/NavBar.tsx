@@ -187,23 +187,22 @@ const NavBar = () => {
             onClick={() => setMenu(!menu)}
           />
         </NavBtn>
-
         <NavLink>
-          <Link href="/product" locale={locale}><LinkA>{t.navbar.product}</LinkA></Link>
-          <Link href="/whoweare" locale={locale}><LinkA>{t.navbar.weare}</LinkA></Link>
-          <Link href="/talktoyou" locale={locale}><LinkA>{t.navbar.talk}</LinkA></Link>
-          <Link href="/contactus" locale={locale}><LinkA>{t.navbar.contact}</LinkA></Link>
-          <ChangeLangButton onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
+          <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></Link>
+          <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
           <SpaceButton>|</SpaceButton>
-          <ChangeLangButton onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
+          <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
         </NavLink>
       </Nav>
       {menu &&
         <LinkContainer>
-          <Link href="/product" locale={locale}><LinkA>{t.navbar.product}</LinkA></Link>
-          <Link href="/whoweare" locale={locale}><LinkA>{t.navbar.weare}</LinkA></Link>
-          <Link href="/talktoyou" locale={locale}><LinkA>{t.navbar.talk}</LinkA></Link>
-          <Link href="/contactus" locale={locale}><LinkA>{t.navbar.contact}</LinkA></Link>
+          <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></Link>
         </LinkContainer>
       }
     </>
