@@ -5,6 +5,7 @@ import { Address } from '../../components/Address';
 import blogData from '../../data/blog.json';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 
@@ -126,7 +127,7 @@ const TalkToYou: NextPage = () => {
                       <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
                       <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
                     </div>
-                    <Readmore href={`/talktoyou/${item.id}`}>{t.blog.readmore}</Readmore>
+                    <Link href={`/talktoyou/${item.id}`} locale={locale}><Readmore >{t.blog.readmore}</Readmore></Link>
                   </ContentContainer>
                 </Card>
               </div>

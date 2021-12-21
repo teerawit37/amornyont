@@ -1,13 +1,14 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
 import { useRouter } from "next/router";
+import Link from 'next/link'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
 const mq = breakpoints.map(
-    bp => `@media (min-width: ${bp}px)`
+  bp => `@media (min-width: ${bp}px)`
 )
 
 const FooterContainer = styled.div`
@@ -35,7 +36,7 @@ const FooterLink = styled.div`
   }
 `
 
-const Link = styled.a`
+const LinkA = styled.a`
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
@@ -56,21 +57,21 @@ const Footer = () => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : th;
-    return (
-        <>
-            <FooterContainer>
-                <FooterLink>
-                    <Link href="" target="_blank" rel="noreferrer">{t.footer.product}</Link>
-                    <Link href="" target="_blank" rel="noreferrer">{t.footer.weare}</Link>
-                    <Link href="" target="_blank" rel="noreferrer">{t.footer.talk}</Link>
-                    <Link href="" target="_blank" rel="noreferrer">{t.footer.contact}</Link>
-                </FooterLink>
-                <Copyright>
-                  {t.footer.copyright}
-                </Copyright>
-            </FooterContainer>
-        </>
-    );
+  return (
+    <>
+      <FooterContainer>
+        <FooterLink>
+          <Link href="/product" locale={locale}><LinkA>{t.footer.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA>{t.footer.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA>{t.footer.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA>{t.footer.contact}</LinkA></Link>
+        </FooterLink>
+        <Copyright>
+          {t.footer.copyright}
+        </Copyright>
+      </FooterContainer>
+    </>
+  );
 }
 
 export default memo(Footer);

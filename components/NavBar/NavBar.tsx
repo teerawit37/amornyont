@@ -1,11 +1,11 @@
 import { memo, useContext, useEffect, useState } from "react";
 import Image from 'next/image';
 import styled from '@emotion/styled';
-import { useTranslation } from 'react-i18next';
 import logo from '../../public/assets/images/amornyont-logo.png'
 import logoMB from '../../public/assets/images/amornyont-logo-mb.png'
 import icon from '../../public/assets/icons/menu.png'
 import { useRouter } from "next/router";
+import Link from 'next/link'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 
@@ -53,7 +53,7 @@ const NavLink = styled.div`
   }
 `
 
-const Link = styled.a`
+const LinkA = styled.a`
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
@@ -121,12 +121,12 @@ const NavBar = () => {
 
   const changeLanguageEN = () => {
     const locale = 'en';
-    if(query.slug !== undefined && router.pathname.search('[slug]')){
+    if (query.slug !== undefined && router.pathname.search('[slug]')) {
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
       const path = result_path + query.slug
       router.push(path, path, { locale: 'en' })
       // router.push(path)
-    }else {
+    } else {
       const path = router.pathname
       router.push(path, path, { locale: 'en' })
       // router.push(path)
@@ -135,41 +135,45 @@ const NavBar = () => {
 
   const changeLanguageTH = () => {
     const locale = 'th';
-    if(query.slug !== undefined && router.pathname.search('[slug]')){
+    if (query.slug !== undefined && router.pathname.search('[slug]')) {
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
       const path = result_path + query.slug
       router.push(path, path, { locale: 'th' })
       // router.push(path)
-    }else {
+    } else {
       const path = router.pathname
       router.push(path)
       router.push(path, path, { locale: 'th' })
-      
+
     }
   }
   return (
     <>
       <Nav>
         <NavHeader>
-          <Link href="/" rel="noreferrer" className="d-block d-lg-none">
-            <Image
-              alt="logo"
-              src={logoMB}
-              quality={100}
-              placeholder="blur"
-              width={57}
-              height={37}
-            />
+          <Link href="/" locale={locale}>
+            <LinkA className="d-block d-lg-none">
+              <Image
+                alt="logo"
+                src={logoMB}
+                quality={100}
+                placeholder="blur"
+                width={57}
+                height={37}
+              />
+            </LinkA>
           </Link>
-          <Link href="/" rel="noreferrer" className="d-none d-lg-block">
-            <Image
-              alt="logo"
-              src={logo}
-              quality={100}
-              placeholder="blur"
-              width={194}
-              height={26}
-            />
+          <Link href="/" locale={locale}>
+            <LinkA className="d-none d-lg-block">
+              <Image
+                alt="logo"
+                src={logo}
+                quality={100}
+                placeholder="blur"
+                width={194}
+                height={26}
+              />
+            </LinkA>
           </Link>
         </NavHeader>
         <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText>02-224-2247</HotLineText></HotLineContainer>
@@ -185,10 +189,10 @@ const NavBar = () => {
         </NavBtn>
 
         <NavLink>
-          <Link href="/product" rel="noreferrer">{t.navbar.product}</Link>
-          <Link href="/whoweare" rel="noreferrer">{t.navbar.weare}</Link>
-          <Link href="/talktoyou" rel="noreferrer">{t.navbar.talk}</Link>
-          <Link href="/contactus" rel="noreferrer">{t.navbar.contact}</Link>
+          <Link href="/product" locale={locale}><LinkA>{t.navbar.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA>{t.navbar.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA>{t.navbar.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA>{t.navbar.contact}</LinkA></Link>
           <ChangeLangButton onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
           <SpaceButton>|</SpaceButton>
           <ChangeLangButton onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
@@ -196,10 +200,10 @@ const NavBar = () => {
       </Nav>
       {menu &&
         <LinkContainer>
-          <Link href="/product" rel="noreferrer">{t.navbar.product}</Link>
-          <Link href="/whoweare" rel="noreferrer">{t.navbar.weare}</Link>
-          <Link href="/talktoyou" rel="noreferrer">{t.navbar.talk}</Link>
-          <Link href="/contactus" rel="noreferrer">{t.navbar.contact}</Link>
+          <Link href="/product" locale={locale}><LinkA>{t.navbar.product}</LinkA></Link>
+          <Link href="/whoweare" locale={locale}><LinkA>{t.navbar.weare}</LinkA></Link>
+          <Link href="/talktoyou" locale={locale}><LinkA>{t.navbar.talk}</LinkA></Link>
+          <Link href="/contactus" locale={locale}><LinkA>{t.navbar.contact}</LinkA></Link>
         </LinkContainer>
       }
     </>
