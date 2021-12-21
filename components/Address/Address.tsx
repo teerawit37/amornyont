@@ -68,6 +68,17 @@ const Desc = styled.div`
   font-size: 14px;
 `
 
+const Img = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  margin-right: 10px;
+`
+const TitleContain = styled.div`
+  display: flex;
+  flex: 1;
+`
+
 
 const Address = () => {
   const router = useRouter();
@@ -78,11 +89,56 @@ const Address = () => {
       <H5>{t.address.title}</H5>
       <AddressContainer>
         <AddressContext>
-          <AddressRow><AdresssTitle>{t.address.addressTitle}</AdresssTitle><Desc>{t.address.address}</Desc></AddressRow>
-          <AddressRow><AdresssTitle>{t.address.lineTitle}</AdresssTitle><Desc>{t.address.line}</Desc></AddressRow>
-          <AddressRow><AdresssTitle>{t.address.callTitle}</AdresssTitle><Desc>{t.address.call}</Desc></AddressRow>
-          <AddressRow><AdresssTitle>{t.address.faxTitle}</AdresssTitle><Desc>{t.address.fax}</Desc></AddressRow>
-          <AddressRow><AdresssTitle>{t.address.mailTitle}</AdresssTitle><Desc>{t.address.mail}</Desc></AddressRow>
+          <AddressRow>
+            <TitleContain>
+              <Img
+                alt="pin"
+                src="/assets/icons/pin_green.png"
+              />
+              <AdresssTitle>{t.address.addressTitle}</AdresssTitle>
+            </TitleContain>
+            <Desc>{t.address.address}</Desc>
+          </AddressRow>
+          <AddressRow>
+            <TitleContain>
+              <Img
+                alt="line"
+                src="/assets/icons/line_green.png"
+              />
+              <AdresssTitle>{t.address.lineTitle}</AdresssTitle>
+            </TitleContain>
+            <Desc>{t.address.line}</Desc>
+          </AddressRow>
+          <AddressRow>
+            <TitleContain>
+              <Img
+                alt="call"
+                src="/assets/icons/call_green.png"
+              />
+              <AdresssTitle>{t.address.callTitle}</AdresssTitle>
+            </TitleContain>
+            <Desc>{t.address.call}</Desc>
+          </AddressRow>
+          <AddressRow>
+            <TitleContain>
+              <Img
+                alt="fax"
+                src="/assets/icons/fax_green.png"
+              />
+              <AdresssTitle>{t.address.faxTitle}</AdresssTitle>
+            </TitleContain>
+            <Desc>{t.address.fax}</Desc>
+          </AddressRow>
+          <AddressRow>
+            <TitleContain>
+              <Img
+                alt="mail"
+                src="/assets/icons/mail_green.png"
+              />
+              <AdresssTitle>{t.address.mailTitle}</AdresssTitle>
+            </TitleContain>
+            <Desc>{t.address.mail}</Desc>
+          </AddressRow>
         </AddressContext>
       </AddressContainer>
     </>

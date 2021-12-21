@@ -126,7 +126,7 @@ const TalkToYou: NextPage = () => {
                       <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
                       <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
                     </div>
-                    <Readmore href={`/talktoyou/${item.id}`}>Read more</Readmore>
+                    <Readmore href={`/talktoyou/${item.id}`}>{t.blog.readmore}</Readmore>
                   </ContentContainer>
                 </Card>
               </div>

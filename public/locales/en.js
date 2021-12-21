@@ -21,6 +21,9 @@ export default {
     heroDesc: 'At Amornyont, a leading MITSUBOSHI (Japan) belts distributor, we offer full range of belts including automotive, industrial and agriculture belts.',
     btnSeeHow: 'See How We Do It',
   },
+  blog: {
+    readmore: 'Read more'
+  },
   productCate: {
     autoBelt: 'AUTOMOTIVE BELTS',
     industBelt: 'INDUSTRIAL BELTS',

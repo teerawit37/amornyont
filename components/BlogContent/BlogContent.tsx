@@ -5,6 +5,8 @@ import who1 from '../../public/assets/images/who-1.png';
 import who2 from '../../public/assets/images/who-2.png';
 import blogData from '../../data/blog.json';
 import { useRouter } from "next/router";
+import en from '../../public/locales/en';
+import th from '../../public/locales/th';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -24,6 +26,7 @@ const ContentContainer = styled.div`
   align-items: center;
   margin-top: -30px;
   z-index: 80;
+  width: 100%;
   ${mq[1]} {
     padding: 32px;
     }
@@ -82,67 +85,43 @@ const ImageContent2 = styled.div`
 export interface MyComponentProps {
   id: string;
   title: string;
-  subtitle: string;
-  paragraph1: string;
-  paragraph2: string;
-  paragraph3: string;
-  paragraph4: string;
+  titleTh: string;
+  desc: string;
+  descTh: string;
+  content: string;
+  contentTh: string;
 }
 
 const WhoContent = () => {
   const [blog, setBlog] = useState<MyComponentProps>();
-  const router = useRouter()
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'en' ? en : th;
+
   const { slug } = router.query
-    useEffect(() => {
-      console.log(slug)
-        if (blogData) {
-          const found = blogData.data.find(element => element.id === slug);
-          setBlog(found);
-        }
-    }, [slug]);
+  useEffect(() => {
+    console.log(slug)
+    if(slug !== undefined) {
+    if (blogData) {
+      const found = blogData.data.find(element => element.id === slug);
+      setBlog(found);
+    }
+  }
+  }, [slug]);
   return (
     <div className="container">
       <div className="d-flex">
-      <ContentContainer>
-        <Title>{blog?.title}</Title>
-        <SubTitle>{blog?.subtitle}</SubTitle>
-        <div className="row">
-          <div className="col-12 col-lg-6">
-            <ImageContent1>
-              <Image
-                alt="hero-bg-1"
-                src={who1}
-                placeholder="blur"
-                layout="responsive"
-                objectFit="cover"
-                quality={100}
-              />
-            </ImageContent1>
-          </div>
-          <div className="col-12 col-lg-6">
-            <TextContent>{blog?.paragraph1}</TextContent>
-            <TextContent>{blog?.paragraph2}</TextContent>
-          </div>
-          <div className="col-12">
-            <ImageContent2>
-              <Image
-                alt="hero-bg-2"
-                src={who2}
-                placeholder="blur"
-                layout="responsive"
-                objectFit="cover"
-                quality={100}
-              />
-            </ImageContent2>
-          </div>
-          <div className="col-12">
-            <TextContent>{blog?.paragraph3}</TextContent>
-            <TextContent>{blog?.paragraph4}</TextContent>
-          </div>
-        </div>
-      </ContentContainer>
+        <ContentContainer>
+          <Title>{locale === 'en' ? blog?.title : blog?.titleTh}</Title>
+          <SubTitle>{locale === 'en' ? blog?.desc : blog?.descTh}</SubTitle>
+          {blog !== undefined &&
+            <div dangerouslySetInnerHTML={{
+              __html: locale === 'en' ? blog.content : blog.contentTh
+            }}></div>
+          }
+        </ContentContainer>
       </div>
-    </div>
+    </div >
   );
 }
 

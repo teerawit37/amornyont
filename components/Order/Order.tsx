@@ -2,6 +2,7 @@ import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import herobg3 from '../../public/assets/images/bg-hero-3.png';
+import qrcode from '../../public/assets/images/qr-code.png';
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 import { useRouter } from "next/router";
@@ -151,80 +152,112 @@ const Order = ({
             <HeroShowCase>
               <Title>{t.order.title}</Title>
               <div>{t.order.subtitle}</div>
-              <div className="container">
-                <ContactContainer>
-                  <ContactItem>
-                    <Img
-                      alt="line"
-                      src="/assets/icons/line.png"
+              <div className="container mt-4">
+                <div className="row">
+                  <div className="d-none d-xl-block col-xl-2" />
+                  <div className="d-none d-lg-block col-lg-6 col-xl-4">
+                    <Image
+                      alt="qr-code"
+                      src={qrcode}
+                      placeholder="blur"
+                      width={198}
+                      height={198}
+                      quality={100}
                     />
-                    <LineButton href="http://line.me/ti/p/@amornyont">
-                      {t.order.line}
-                    </LineButton>
-                  </ContactItem>
-                  <ContactItem>
-                    <Img
-                      alt="call"
-                      src="/assets/icons/call.png"
-                    />
-                    <Button href="tel:02-224-2247">
-                      {t.order.call}
-                    </Button>
-                  </ContactItem>
-                  <ContactItem>
-                    <Img
-                      alt="mail"
-                      src="/assets/icons/mail.png"
-                    />
-                    <Button href="mailto: sales@amornyont.com">
-                      {t.order.mail}
-                    </Button>
-                  </ContactItem>
-                </ContactContainer>
+                  </div>
+                  <div className="col-12 col-lg-6 col-xl-4">
+                    <ContactContainer>
+                      <ContactItem>
+                        <Img
+                          alt="line"
+                          src="/assets/icons/line.png"
+                        />
+                        <LineButton href="http://line.me/ti/p/@amornyont">
+                          {t.order.line}
+                        </LineButton>
+                      </ContactItem>
+                      <ContactItem>
+                        <Img
+                          alt="call"
+                          src="/assets/icons/call.png"
+                        />
+                        <Button href="tel:02-224-2247">
+                          {t.order.call}
+                        </Button>
+                      </ContactItem>
+                      <ContactItem>
+                        <Img
+                          alt="mail"
+                          src="/assets/icons/mail.png"
+                        />
+                        <Button href="mailto: sales@amornyont.com">
+                          {t.order.mail}
+                        </Button>
+                      </ContactItem>
+                    </ContactContainer>
+                  </div>
+                  <div className="d-none d-xl-block col-xl-2" />
+                </div>
               </div>
             </HeroShowCase>
           </HeroBG>
         </OrderSection>
         :
         <OrderSectionW>
-        <HeroBG>
-          <HeroShowCaseW>
-            <Title>{t.order.title}</Title>
-            <div>{t.order.subtitle}</div>
-            <div className="container">
-              <ContactContainer>
-                <ContactItem>
-                  <Img
-                    alt="line"
-                    src="/assets/icons/line.png"
-                  />
-                  <LineButton href="http://line.me/ti/p/@amornyont">
-                    {t.order.line}
-                  </LineButton>
-                </ContactItem>
-                <ContactItem>
-                  <Img
-                    alt="call"
-                    src="/assets/icons/call.png"
-                  />
-                  <Button href="tel:02-224-2247">
-                    {t.order.call}
-                  </Button>
-                </ContactItem>
-                <ContactItem>
-                  <Img
-                    alt="mail"
-                    src="/assets/icons/mail.png"
-                  />
-                  <Button href="mailto: sales@amornyont.com">
-                    {t.order.mail}
-                  </Button>
-                </ContactItem>
-              </ContactContainer>
-            </div>
-          </HeroShowCaseW>
-        </HeroBG>
-      </OrderSectionW>
+          <HeroBG>
+            <HeroShowCaseW>
+              <Title>{t.order.title}</Title>
+              <div>{t.order.subtitle}</div>
+              <div className="container">
+                <div className="row">
+                  <div className="d-none d-xl-block col-xl-2" />
+                  <div className="d-none d-lg-block col-lg-6 col-xl-4">
+                    <Image
+                      alt="qr-code"
+                      src={qrcode}
+                      placeholder="blur"
+                      width={198}
+                      height={198}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="col-12 col-lg-6 col-xl-4">
+                    <ContactContainer>
+                      <ContactItem>
+                        <Img
+                          alt="line"
+                          src="/assets/icons/line.png"
+                        />
+                        <LineButton href="http://line.me/ti/p/@amornyont">
+                          {t.order.line}
+                        </LineButton>
+                      </ContactItem>
+                      <ContactItem>
+                        <Img
+                          alt="call"
+                          src="/assets/icons/call.png"
+                        />
+                        <Button href="tel:02-224-2247">
+                          {t.order.call}
+                        </Button>
+                      </ContactItem>
+                      <ContactItem>
+                        <Img
+                          alt="mail"
+                          src="/assets/icons/mail.png"
+                        />
+                        <Button href="mailto: sales@amornyont.com">
+                          {t.order.mail}
+                        </Button>
+                      </ContactItem>
+                    </ContactContainer>
+                  </div>
+                  <div className="d-none d-xl-block col-xl-2" />
+                </div>
+              </div>
+            </HeroShowCaseW>
+          </HeroBG>
+        </OrderSectionW>
       }
     </>
   );

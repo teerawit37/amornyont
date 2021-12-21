@@ -116,13 +116,31 @@ color: #4F5450;
 const NavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   const router = useRouter();
-  const { locale } = router;
+  const { locale, query } = router;
   const t = locale === 'en' ? en : th;
 
-  const changeLanguage = (lang: string) => {
-    const locale = lang;
-    const path = locale + router.pathname
-    router.replace(path, path, { locale })
+  const changeLanguageEN = () => {
+    const locale = 'en';
+    if(query.slug !== undefined && router.pathname.search('[slug]')){
+      const result_path = router.pathname.substring(0, router.pathname.length - 6);
+      const path = '/' + locale + result_path + query.slug
+      router.push(path)
+    }else {
+      const path = '/' + locale + router.pathname
+      router.push(path)
+    }
+  }
+
+  const changeLanguageTH = () => {
+    const locale = 'th';
+    if(query.slug !== undefined && router.pathname.search('[slug]')){
+      const result_path = router.pathname.substring(0, router.pathname.length - 6);
+      const path = result_path + query.slug
+      router.push(path)
+    }else {
+      const path = router.pathname
+      router.push(path)
+    }
   }
   return (
     <>
@@ -166,9 +184,9 @@ const NavBar = () => {
           <Link href="/whoweare" rel="noreferrer">{t.navbar.weare}</Link>
           <Link href="/talktoyou" rel="noreferrer">{t.navbar.talk}</Link>
           <Link href="/contactus" rel="noreferrer">{t.navbar.contact}</Link>
-          <ChangeLangButton onClick={() => changeLanguage('th')}>{t.navbar.btnTH}</ChangeLangButton>
+          <ChangeLangButton onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
           <SpaceButton>|</SpaceButton>
-          <ChangeLangButton onClick={() => changeLanguage('en')}>{t.navbar.btnEN}</ChangeLangButton>
+          <ChangeLangButton onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
         </NavLink>
       </Nav>
       {menu &&
