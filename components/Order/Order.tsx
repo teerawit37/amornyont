@@ -121,6 +121,24 @@ const Title = styled.div`
   line-height: 40px;
 `
 
+const AddFriend = styled.div`
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000;
+`
+
+const AddFriendW = styled.div`
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+`
+
 const Img = styled.img`
   width: 44px;
   height: 44px;
@@ -155,7 +173,7 @@ const Order = ({
               <div className="container mt-4">
                 <div className="row">
                   <div className="d-none d-xl-block col-xl-2" />
-                  <div className="d-none d-lg-block col-lg-6 col-xl-4">
+                  <div className="d-none d-lg-block col-lg-6 col-xl-4 text-center">
                     <Image
                       alt="qr-code"
                       src={qrcode}
@@ -164,6 +182,9 @@ const Order = ({
                       height={198}
                       quality={100}
                     />
+                    <div className="d-flex justify-content-center">
+                      <AddFriendW>{t.order.addfriend}</AddFriendW>
+                    </div>
                   </div>
                   <div className="col-12 col-lg-6 col-xl-4">
                     <ContactContainer>
@@ -211,7 +232,7 @@ const Order = ({
               <div className="container">
                 <div className="row">
                   <div className="d-none d-xl-block col-xl-2" />
-                  <div className="d-none d-lg-block col-lg-6 col-xl-4">
+                  <div className="d-none d-lg-block col-lg-6 col-xl-4 text-center">
                     <Image
                       alt="qr-code"
                       src={qrcode}
@@ -220,6 +241,9 @@ const Order = ({
                       height={198}
                       quality={100}
                     />
+                    <div className="d-flex justify-content-center">
+                      <AddFriend>{t.order.addfriend}</AddFriend>
+                    </div>
                   </div>
                   <div className="col-12 col-lg-6 col-xl-4">
                     <ContactContainer>

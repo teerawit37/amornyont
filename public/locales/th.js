@@ -39,6 +39,7 @@ export default {
     line: 'Add: @amornyont',
     call: 'Call: 02-224-2247',
     mail: 'Send: sales@amornyont.com',
+    addfriend: ' LINE เพิ่มเพื่อน',
   },
   address: {
     title: 'ห้างหุ้นส่วนจำกัด อมรยนต์',
