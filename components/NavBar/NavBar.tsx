@@ -125,11 +125,9 @@ const NavBar = () => {
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
       const path = result_path + query.slug
       router.push(path, path, { locale: 'en' })
-      // router.push(path)
     } else {
       const path = router.pathname
       router.push(path, path, { locale: 'en' })
-      // router.push(path)
     }
   }
 
@@ -139,13 +137,17 @@ const NavBar = () => {
       const result_path = router.pathname.substring(0, router.pathname.length - 6);
       const path = result_path + query.slug
       router.push(path, path, { locale: 'th' })
-      // router.push(path)
     } else {
       const path = router.pathname
-      router.push(path)
       router.push(path, path, { locale: 'th' })
 
     }
+  }
+
+  const goTo = (path: string) => {
+    setMenu(false);
+    router.push(path)
+    router.push(path, path, { locale: locale })
   }
   return (
     <>
@@ -199,10 +201,10 @@ const NavBar = () => {
       </Nav>
       {menu &&
         <LinkContainer>
-          <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></Link>
-          <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></Link>
-          <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></Link>
-          <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></Link>
+          <div onClick={() => goTo("/product")} ><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></div>
+          <div onClick={() => goTo("/whoweare")} ><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></div>
+          <div onClick={() => goTo("/talktoyou")} ><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></div>
+          <div onClick={() => goTo("/contactus")} ><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></div>
         </LinkContainer>
       }
     </>
