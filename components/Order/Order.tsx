@@ -149,6 +149,11 @@ const Vi = styled.div`
   height: 24px;
 `
 
+const ViB = styled.div`
+  border-left: 1px solid #000;
+  height: 24px;
+`
+
 const ViContainer = styled.div`
   position: absolute;
   left: 50%;
@@ -251,10 +256,11 @@ const Order = ({
             <HeroShowCaseW>
               <Title>{t.order.title}</Title>
               <div>{t.order.subtitle}</div>
-              <div className="container">
+              <div className="container mt-4">
                 <div className="row">
                   <div className="d-none d-xl-block col-xl-2" />
-                  <div className="d-none d-lg-block col-lg-6 col-xl-4 text-center">
+                  <div className="d-none d-lg-block col-lg-2 col-xl-1" />
+                  <div className="d-none d-lg-block col-lg-4 col-xl-3 text-center">
                     <Image
                       alt="qr-code"
                       src={qrcode}
@@ -263,6 +269,13 @@ const Order = ({
                       height={198}
                       quality={100}
                     />
+                    <ViContainer className="d-none d-lg-block">
+                      <div className="d-flex flex-column align-items-center">
+                        <ViB />
+                        <div className="text-black am-p-5">{t.order.or}</div>
+                        <ViB />
+                      </div>
+                    </ViContainer>
                     <div className="d-flex justify-content-center">
                       <AddFriend>{t.order.addfriend}</AddFriend>
                     </div>
