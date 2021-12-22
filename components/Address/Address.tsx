@@ -22,15 +22,17 @@ const AddressContainer = styled.div`
   display: flex; 
   flex-direction: column;
   ${mq[1]} {
-      width: 312px;
+      width: 100%;
+      max-width: 350px;
     }
   ${mq[2]} {
-      width: 312px;
+      width: 100%;
+      max-width: 412px;
       padding: 14px 24px;
     }
     ${mq[3]} {
-      width: 368px;
-      max-width: 368px;
+      width: 100%;
+      max-width: 468px;
     }
 `
 const H5 = styled.h5`
