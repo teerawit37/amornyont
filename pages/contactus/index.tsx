@@ -3,6 +3,8 @@ import React, { SyntheticEvent, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { ContactBanner } from '../../components/PageBanner';
 import { Address } from '../../components/Address';
+import union from '../../public/assets/images/union.png'
+import Image from 'next/image';
 import { useRouter } from 'next/router'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
@@ -25,6 +27,7 @@ const AddressSection = styled.section`
   display: flex;
   height: 367px;
   width: 100%;
+  postion: relative;
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -68,6 +71,15 @@ const Text = styled.div`
   text-align: center;
   color: #7B7F7C;
   margin-bottom: 16px;
+`
+
+const AddressImage = styled.div`
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  ${mq[3]} {
+    right: 10%;
+    }
 `
 
 const ContactUS: NextPage = () => {
@@ -135,6 +147,16 @@ const ContactUS: NextPage = () => {
       </div>
     </div >
       <AddressSection>
+      <AddressImage className="d-none d-lg-block">
+          <Image
+            alt="hero-bg-3"
+            src={union}
+            placeholder="blur"
+            width={490}
+            height={243}
+            quality={100}
+          />
+        </AddressImage>
         <div className="container">
           <Container>
             <Address />

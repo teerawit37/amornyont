@@ -1,5 +1,7 @@
 import { memo } from "react";
 import styled from '@emotion/styled';
+import Image from 'next/image';
+import union from '../../public/assets/images/union.png';
 import { useRouter } from "next/router";
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
@@ -14,7 +16,6 @@ const AddressContainer = styled.div`
   height: 100%;
   width: 100%;
   max-width: 312px;
-  background-color: #fff;
   position: relative;
   padding: 14px 16px;
   align-items: center;
@@ -39,6 +40,7 @@ const H5 = styled.h5`
   color: #000000;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  text-align: center;
   ${mq[3]} {
     font-size: 28px;
     }

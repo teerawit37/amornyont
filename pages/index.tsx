@@ -15,6 +15,7 @@ import icon3 from '../public/assets/icons/product.png'
 import amornyontcolor from '../public/assets/images/amornyont-color.png'
 import amornyontwhite from '../public/assets/images/amornyont-logo-white.png'
 import mitsuboshicolor from '../public/assets/images/mitsuboshi-color.png'
+import union from '../public/assets/images/union.png'
 import { ProductBanner } from '../components/ProductBanner';
 import { ProductCate } from '../components/ProductCate';
 import { Overlay } from '../components/Overlay';
@@ -86,6 +87,7 @@ const AddressSection = styled.section`
   display: flex;
   height: 367px;
   width: 100%;
+  position: relative;
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -234,6 +236,14 @@ const Button = styled.div`
   margin-top: 32px;
   border-radius: 6px;
 `
+const AddressImage = styled.div`
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  ${mq[3]} {
+    right: 10%;
+    }
+`
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -292,59 +302,59 @@ const Home: NextPage = () => {
               <TextHero>WHY US?</TextHero>
               <TextHeroSub>ครบ...ทุกเรื่องสายพาน</TextHeroSub>
               <div className="container">
-              <WhyUsContainer>
-                <WhyItemContainer>
-                  <IconWhite>
-                    <Image
-                      alt="logo-white"
-                      src={icon1}
-                      placeholder="blur"
-                      layout="responsive"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  </IconWhite>
-                  <TextBlock>
-                    <WhyTitle>Good Choice</WhyTitle>
-                    <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                    <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
-                  </TextBlock>
-                </WhyItemContainer>
-                <WhyItemContainer>
-                  <IconWhite>
-                    <Image
-                      alt="logo-white"
-                      src={icon2}
-                      placeholder="blur"
-                      layout="responsive"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  </IconWhite>
-                  <TextBlock>
-                    <WhyTitle>Care Service</WhyTitle>
-                    <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                    <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
-                  </TextBlock>
-                </WhyItemContainer>
-                <WhyItemContainer>
-                  <IconWhite>
-                    <Image
-                      alt="logo-white"
-                      src={icon3}
-                      placeholder="blur"
-                      layout="responsive"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  </IconWhite>
-                  <TextBlock>
-                    <WhyTitle>Variety of products</WhyTitle>
-                    <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                    <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
-                  </TextBlock>
-                </WhyItemContainer>
-              </WhyUsContainer>
+                <WhyUsContainer>
+                  <WhyItemContainer>
+                    <IconWhite>
+                      <Image
+                        alt="logo-white"
+                        src={icon1}
+                        placeholder="blur"
+                        layout="responsive"
+                        objectFit="cover"
+                        quality={100}
+                      />
+                    </IconWhite>
+                    <TextBlock>
+                      <WhyTitle>Good Choice</WhyTitle>
+                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
+                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                    </TextBlock>
+                  </WhyItemContainer>
+                  <WhyItemContainer>
+                    <IconWhite>
+                      <Image
+                        alt="logo-white"
+                        src={icon2}
+                        placeholder="blur"
+                        layout="responsive"
+                        objectFit="cover"
+                        quality={100}
+                      />
+                    </IconWhite>
+                    <TextBlock>
+                      <WhyTitle>Care Service</WhyTitle>
+                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
+                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                    </TextBlock>
+                  </WhyItemContainer>
+                  <WhyItemContainer>
+                    <IconWhite>
+                      <Image
+                        alt="logo-white"
+                        src={icon3}
+                        placeholder="blur"
+                        layout="responsive"
+                        objectFit="cover"
+                        quality={100}
+                      />
+                    </IconWhite>
+                    <TextBlock>
+                      <WhyTitle>Variety of products</WhyTitle>
+                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
+                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                    </TextBlock>
+                  </WhyItemContainer>
+                </WhyUsContainer>
               </div>
             </AbsoluteContainer>
           </HeroShowCase>
@@ -378,6 +388,16 @@ const Home: NextPage = () => {
       </ProductSection>
       <Order />
       <AddressSection>
+        <AddressImage className="d-none d-lg-block">
+          <Image
+            alt="hero-bg-3"
+            src={union}
+            placeholder="blur"
+            width={490}
+            height={243}
+            quality={100}
+          />
+        </AddressImage>
         <div className={styles.container}>
           <Address />
         </div>
