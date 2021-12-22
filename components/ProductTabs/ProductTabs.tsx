@@ -92,10 +92,8 @@ const ProductCate = () => {
     const t = locale === 'en' ? en : th;
     useEffect(() => {
         if (productData) {
-            // setAutoData(productData.automotive);
-            // setIndustData(productData.industrial);
-            setAutoData(productData.industrial);
-            setIndustData(productData.automotive);
+            setAutoData(productData.automotive);
+            setIndustData(productData.industrial);
         }
     }, [autoData]);
 
