@@ -3,6 +3,12 @@
         {
             "cate": "automotive",
             "id": "auto-1",
+            "img": [
+                {
+                    "src": "auto-1-1",
+                    "name": ""
+                }
+            ],
             "title": "V-ribbed Belt Type K (3PK – 50PK)",
             "titleTH": "สายพานรถยนต์ ร่องVตามยาว รุ่น Ribstar-G",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>Features high power transmission efficiency and small pulley diameter, combining the high power transmission of V-belts with the good flexibility of flat belts. These features also contribute to the compact design and saving energy for the system.</span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -11,6 +17,12 @@
         {
             "cate": "automotive",
             "id": "auto-2",
+            "img": [
+                {
+                    "src": "auto-2-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-Belt P/D M9.5 mm.",
             "titleTH": "สายพานรถยนต์ ร่องV รุ่น M - หน้ากว้าง 9.5 ม.ม.เรียบ",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Standard Raw Edge V-Belt (REMF). These belts feature improved transmission efficiency since they are composed of cord and rubber, with side faces made of fabric. Short fibers are mixed in the rubber in the direction of the belt&apos;s width, contributing to power transmission and helping to resist abrasion caused by side pressure.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -19,6 +31,12 @@
         {
             "cate": "automotive",
             "id": "auto-3",
+            "img": [
+                {
+                    "src": "auto-3-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-Belt A12.5 mm.",
             "titleTH": "สายพาน V-Belt ร่อง A12.5 ม.ม.",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Standard Raw Edge V-Belt (REMF). These belts feature improved transmission efficiency since they are composed of cord and rubber, with side faces made of fabric. Short fibers are mixed in the rubber in the direction of the belt's width, contributing to power transmission and helping to resist abrasion caused by side pressure.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -27,6 +45,12 @@
         {
             "cate": "automotive",
             "id": "auto-4",
+            "img": [
+                {
+                    "src": "auto-4-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-Belt B17 mm.",
             "titleTH": "สายพานรถยนต์ ร่องV รุ่น B - หน้ากว้าง 17 ม.ม.เรียบ",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Standard Raw Edge V-Belt (REMF). These belts feature improved transmission efficiency since they are composed of cord and rubber, with side faces made of fabric. Short fibers are mixed in the rubber in the direction of the belt's width, contributing to power transmission and helping to resist abrasion caused by side pressure.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -35,6 +59,12 @@
         {
             "cate": "automotive",
             "id": "auto-5",
+            "img": [
+                {
+                    "src": "auto-5-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-Belt P/D M9.5 mm.",
             "titleTH": "สายพานรถยนต์ ร่องV รุ่น M - หน้ากว้าง 9.5 ม.ม. แบบฟันเฟือง",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Basically these Raw Edge V-Belt - Powerdrive Type are the same as the smooth-face standard V-Belt, but provide more suitability to passenger cars.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -43,6 +73,12 @@
         {
             "cate": "automotive",
             "id": "auto-6",
+            "img": [
+                {
+                    "src": "auto-6-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-Belt P/D A12.5 mm.",
             "titleTH": "สายพานรถยนต์ ร่องV รุ่น A - หน้ากว้าง 12.5 ม.ม. แบบฟันเฟือง (Powerdrive)",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Basically these Raw Edge V-Belt - Powerdrive Type are the same as the smooth-face standard V-Belt, but provide more suitability to passenger cars.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -51,6 +87,12 @@
         {
             "cate": "automotive",
             "id": "auto-7",
+            "img": [
+                {
+                    "src": "auto-7-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge Cogged V-Belt B17 mm.",
             "titleTH": "สายพานรถยนต์ ร่องVแบบฟันเฟือง รุ่น B - หน้ากว้าง 17 ม.ม. แบบฟันเฟือง",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Generally similar to standard Raw Edge V-Belt (REMF) , however Raw Edged Cogged V-belts (RECMF) are more suitable to Flexible, High Horsepower Type.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -59,6 +101,12 @@
         {
             "cate": "automotive",
             "id": "auto-8",
+            "img": [
+                {
+                    "src": "auto-8-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge Cogged V-Belt C22 mm.",
             "titleTH": "สายพานรถยนต์ ร่องVแบบฟันเฟือง รุ่น C - หน้ากว้าง 22 ม.ม. แบบฟันเฟือง",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br><span>Generally similar to standard Raw Edge V-Belt (REMF) , however Raw Edged Cogged V-belts (RECMF) are more suitable to Flexible, High Horsepower Type.</span></span></p><p><span><br><strong>Applications:</strong><br>Passenger Cars, Trucks, Buses</span></p>",
@@ -69,6 +117,12 @@
         {
             "cate": "industrial",
             "id": "indust-1",
+            "img": [
+                {
+                    "src": "indust-1-1",
+                    "name": ""
+                }
+            ],
             "title": "Round Tooth Timing Belt",
             "titleTH": "Round Tooth Timing Belt",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>The good mesh of round tooth with a pulley allows high power transmission. Lower noise levels are realized and its compact size can reduce costs.</span></p><p><span><br><strong>Applications:</strong><br>Tooling machines, textile machinery, OA equipment, medical equipment, vending machines, household electrical appliances, measuring instruments, cars.</span></p><p><span><br><strong>Belt types:<br>Rubber</strong><br></span></p><ul><li>Super Torque G: S4.5M S8M S14M DS8M DS14M</li><li>Super Torque GN: S2M S3M S5M DS3M DS5M</li><li>Mega Torque G (For low speed &amp; high torque): MTS8M, MTS14M</li></ul>",
@@ -77,6 +131,24 @@
         {
             "cate": "industrial",
             "id": "indust-2",
+            "img": [
+                {
+                    "src": "indust-2-1",
+                    "name": "Rubber"
+                },
+                {
+                    "src": "indust-2-2",
+                    "name": "Double sided (Rubber)"
+                },
+                {
+                    "src": "indust-2-3",
+                    "name": "Polyurethane"
+                },
+                {
+                    "src": "indust-2-4",
+                    "name": "Double sided (Polyurethane)"
+                }
+            ],
             "title": "Trapezoid Tooth Timing Belt",
             "titleTH": "Trapezoid Tooth Timing Belt",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>This synchronous power transmission belt has noise levels lower than that of chains and gears and does not require lubrication. Rubber (G type) or polyurethane (U type) is available depending on application.</span></p><p><span><br><strong>Applications:</strong><br>OA equipment, food machines, vending machines, tooling machines, medical equipment, printing machines</span></p><p><span><br><strong>Belt types:</strong><br><strong>Rubber</strong></span></p><ul><li>Timing Belt G: MXL, XL, L, H, XH, XXH, DXL, DL, DH</li><li>Long Length Timing Belt: Open end belts (MXL, XL, L, H): Endless belts (L, H, XH, XXH)</li><li>Star Max (for carriage drive): T80, T83, T11</li></ul><p><span><br>* Bare Back type is also available to prevent generation of rubber powder.</span></p><p><span><strong>Polyurethane</strong></span></p><ul><li>Timing Belt U: T80, XL, L, T2.5, T5, T10, DT5, DT10</li><li>Star Max U: T80, T83, T111</li><li>Free Span Timing Belt: XL, L, H, T5, T10, AT5, AT10</li><li>Long belts (up to 100m) are available. Polyurethane attachment can be made on back side of belt.</li></ul>",
@@ -85,6 +157,12 @@
         {
             "cate": "industrial",
             "id": "indust-3",
+            "img": [
+                {
+                    "src": "indust-3-1",
+                    "name": ""
+                }
+            ],
             "title": "Narrow Wrapped V-belt (MAXSTAR WEDGE Belt)",
             "titleTH": "Narrow Wrapped V-belt (MAXSTAR WEDGE Belt)",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>This belt has double power transmission capacity of the Standard V-belts due to the effect of the wedge. It features maximum 40 m/sec. high-speed transmission, and an energy-saving, compact design. A banded type that can prevent turnover and ensures stable running is also available.</span></p><p><span><br><strong>Applications:</strong><br>Large sized pumps, crushers, dynamos, tooling machines, freezers</span></p><p><span><br><strong>Belt types:</strong><br><strong>Rubber</strong></span></p><ul><li>MAXSTAR WEDGE 3V, 5V, 8V </li><li>Multi MAXSTAR (Banded type) R3V, R5V, R8V</li></ul>",
@@ -93,6 +171,12 @@
         {
             "cate": "industrial",
             "id": "indust-4",
+            "img": [
+                {
+                    "src": "indust-4-1",
+                    "name": ""
+                }
+            ],
             "title": "Raw Edge V-belt",
             "titleTH": "Raw Edge V-belt",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>These belts feature improved transmission efficiency since they are composed of cord and rubber, with side faces made of fabric. Short fibers are mixed in the rubber in the direction of the belt's width, contributing to power transmission and helping to resist abrasion caused by side pressure.</span></p><p><span><br><strong>Applications:</strong><br>Cars, agricultural machinery, blowers, dynamos, escalators</span></p><p><span><br><strong>Belt types:</strong><ol><li>Raw Edge Plain Belt (REMF): Standard type HM, A, B, BC</li><li>Raw Edged Cogged V-belts: Flexible, high horsepower type</li><ul><li>RECMF (Applications: passenger cars, trucks, buses)<br /><strong>Types:</strong> HM, A, B, BC, C, CD</li><li>riplex (Applications: general industrial use)<br /><strong>Types:</strong> AX, BX, CX</li><li>Multi Triplex (Applications: general industrial use)<br /><strong>Types:</strong> RAX, RBX, RCX</li><li>Maxstar Wedge Supreme (Applications: general industrial use)<br /><strong>Types:</strong> 3VX, 5VX</li><li>Multi Maxstar Wedge Supreme (Applications: general industrial use)<br /><strong>Types:</strong> R3VX, R5VX</li><li>Orange Cog (Applications: agricultural machinery)<br /><strong>Types:</strong> LA, LB, LC</li><li>Super Orange Cog (Applications: agricultural machinery)<br /><strong>Types:</strong> LA, LB, LC</li></ul></ol>",
@@ -101,6 +185,16 @@
         {
             "cate": "industrial",
             "id": "indust-5",
+            "img": [
+                {
+                    "src": "indust-5-1",
+                    "name": "RCVS"
+                },
+                {
+                    "src": "indust-5-2",
+                    "name": "DCVS"
+                }
+            ],
             "title": "Variable Speed Belt",
             "titleTH": "Variable Speed Belt",
             "rawHTML": "<div><strong>Characteristics:</strong><br />Continuous variable speed belts with good side pressure resistance and flexibility. High efficient power transmission allows to smoothly follow speed changes, creating excellent acceleration response.</div><div><br /><strong>Applications:</strong><br />Gear changers, motorcycles and agricultural machinery.</div><p><br /><strong>Belt types</strong>:<br /><strong>RCVS (Side pressure resistant)</strong></p><ul><li>For motorcyclesTypes: Top width 10-120 mm</li><li>For general industrial use gear changersTypes: Top width 10-120 mm</li><li>For large-scale agricultural machineryTypes: HI, HJ, HK, HL, HM, HN</li></ul><p><br /><strong>DCVS (Side pressure resistance, high horsepower transmission)</strong><br /><ul><li>Types: Top width 20-120 mm</li></ul></p>",
@@ -109,6 +203,16 @@
         {
             "cate": "industrial",
             "id": "indust-6",
+            "img": [
+                {
+                    "src": "indust-6-1",
+                    "name": ""
+                },
+                {
+                    "src": "indust-6-2",
+                    "name": ""
+                }
+            ],
             "title": "Wide Angle Polyurethane V-belt",
             "titleTH": "Wide Angle Polyurethane V-belt",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>Compact design is ensured, since driving with high rotation ratio and smaller pulleys is possible. No maintenance required due to the special treatment applied to the cord and its resistance to stretch.</span></p><p><span><br><strong>Applications:</strong><br>Tooling machines, textile machinery, blowers, woodworking machines.</span></p><p><span><br><strong>Belt types:</strong></span></p><ul><li>Polymax: 3M, 5M, 7M, 11M</li><li>Multi Polymax: 5M, 7M, 11M</li></ul>",
@@ -117,6 +221,12 @@
         {
             "cate": "industrial",
             "id": "indust-7",
+            "img": [
+                {
+                    "src": "indust-7-1",
+                    "name": ""
+                }
+            ],
             "title": "V-ribbed Belt",
             "titleTH": "V-ribbed Belt",
             "rawHTML": "<p><span><strong>Characteristics:</strong><br>Features high power transmission efficiency and small pulley diameter, combining the high power transmission of V-belts with the good flexibility of flat belts. These features also contribute to the compact design and saving energy for the system.</span></p><p><span><br><strong>Applications:</strong><br>Health apparatus, dryers for home and business, printing machines, machine tools, cars.</span></p><p><span><br><strong>Belt types:</strong><br><strong>Rubber</strong></span></p><ul><li>for industrial: H, J, K, L, M</li><li>for automotive: K</li></ul>",

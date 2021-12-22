@@ -68,11 +68,19 @@ const ViContainer = styled.div`
   height: 60px;
 `
 
+export interface IimageProps {
+    src: string;
+    name: string;
+}
+
 export interface MyComponentProps {
     cate: string;
     id: string;
+    img: IimageProps[];
     title: string;
+    titleTH: string;
     rawHTML?: string;
+    rawHTMLth?: string;
 }
 
 const ProductCate = () => {
@@ -86,7 +94,7 @@ const ProductCate = () => {
         if (productData) {
             setAutoData(productData.automotive);
             setIndustData(productData.industrial);
-            console.log(autoData)
+            console.log(productData)
         }
     }, [autoData]);
 
@@ -108,7 +116,7 @@ const ProductCate = () => {
                         <div className="col-12 col-md-6 col-xl-3" key={item.id}>
                             <Card
                                 id={item.id}
-                                characteristics={item.Characteristics}
+                                img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
                                 type="Automotive Belt"
@@ -121,7 +129,7 @@ const ProductCate = () => {
                         <div className="col-12 col-md-6 col-xl-3" key={item.id}>
                             <Card
                                 id={item.id}
-                                characteristics={item.Characteristics}
+                                img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
                                 type="Industrial Belt"

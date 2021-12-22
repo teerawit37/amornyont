@@ -42,6 +42,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  border-radius: 6px;
 `
 
 const Desc = styled.div`
@@ -70,11 +71,34 @@ const ModalTitle = styled.div`
   margin-bottom: 24px;
 `
 
+const NameContainer = styled.div`
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0px 8px;
+  background-color: #fff;
+`
+
+const AbsoluteContainer = styled.div`
+  position: absolute;
+  top: 13px;
+`
+
+const RelativeContainer = styled.div`
+  position: relative;
+  margin-bottom: 24px;
+`
+
+export interface IimageProps {
+  src: string;
+  name: string;
+}
+
 export interface MyComponentProps {
   cate: string;
   id: string;
+  img: IimageProps[],
   title: string;
-  characteristics: string;
   type: string;
   rawHTML: string;
 }
@@ -83,23 +107,23 @@ const Card = ({
   cate,
   id,
   title,
-  characteristics,
   type,
+  img,
   rawHTML,
 }: MyComponentProps) => {
-  const [modal, setModal] = useState<boolean>(false)
+  const [modal, setModal] = useState<boolean>(false);
+  console.log(img)
   return (
     <>
       <CardContainer onClick={() => setModal(true)}>
         <ImageContainer>
           <Image
             alt={`${id}`}
-            src={`/assets/images/product/${cate}/${id}.png`}
+            src={`/assets/images/product/${cate}/${id}/${id}-1.png`}
           />
         </ImageContainer>
         <TextContainer>
           <Title>{title}</Title>
-          <Desc>{characteristics}</Desc>
         </TextContainer>
       </CardContainer>
       {/* modal */}
@@ -115,7 +139,7 @@ const Card = ({
                 <div className="col-12 mb-4">
                   <Image
                     alt={`${id}`}
-                    src={`/assets/images/product/${cate}/${id}.png`}
+                    src={`/assets/images/product/${cate}/${id}/${id}-1.png`}
                   />
                 </div>
                 <div className="col-12">
@@ -136,10 +160,19 @@ const Card = ({
                     }}></div>
                 </div>
                 <div className="col-6">
-                  <Image
-                    alt={`${id}`}
-                    src={`/assets/images/product/${cate}/${id}.png`}
-                  />
+                  {img.map((item) => (
+                    <RelativeContainer key={item.src}>
+                      {item.name !== '' &&
+                        <AbsoluteContainer>
+                          <NameContainer>{item.name}</NameContainer>
+                        </AbsoluteContainer>
+                      }
+                      <Image
+                        alt={`${id}`}
+                        src={`/assets/images/product/${cate}/${id}/${item.src}.png`}
+                      />
+                    </RelativeContainer>
+                  ))}
                 </div>
               </div>
             </div>
