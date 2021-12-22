@@ -63,6 +63,7 @@ const Card = styled.div`
   border: 1px solid white;
   margin-top: 16px;
   overflow: hidden;
+  cursor: pointer;
   ${mq[2]} {
     height: 589px;
     }
@@ -130,26 +131,28 @@ const TalkToYou: NextPage = () => {
           <DivContainer className="row">
             {blog.map((item, index) => (
               <div key={index} className="col-12 col-md-6">
-                <Card>
-                  <Img
-                    alt={`${item.id}`}
-                    src={`/assets/images/blogs/${item.id}/cover.jpg`}
-                  />
-                  <ContentContainer>
-                    <div>
-                      <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
-                      <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
-                    </div>
-                    <Link href={`/talktoyou/${item.id}`} locale={locale}><Readmore>{t.blog.readmore}</Readmore></Link>
-                  </ContentContainer>
-                </Card>
+                <Link href={`/talktoyou/${item.id}`} locale={locale}>
+                  <Card>
+                    <Img
+                      alt={`${item.id}`}
+                      src={`/assets/images/blogs/${item.id}/cover.jpg`}
+                    />
+                    <ContentContainer>
+                      <div>
+                        <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
+                        <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
+                      </div>
+                      <Link href={`/talktoyou/${item.id}`} locale={locale}><Readmore>{t.blog.readmore}</Readmore></Link>
+                    </ContentContainer>
+                  </Card>
+                </Link>
               </div>
             ))}
           </DivContainer>
         </div>
       </div>
       <AddressSection>
-      <AddressImage className="d-none d-lg-block">
+        <AddressImage className="d-none d-lg-block">
           <Image
             alt="hero-bg-3"
             src={union}

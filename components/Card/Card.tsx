@@ -42,6 +42,12 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+`
+
+const Images = styled.img`
+  width: 100%;
   border-radius: 6px;
 `
 
@@ -136,7 +142,7 @@ const Card = ({
               <div className="row">
                 <ModalTitle>{title}</ModalTitle>
                 <div className="col-12 mb-4">
-                  <Image
+                  <Images
                     alt={`${id}`}
                     src={`/assets/images/product/${cate}/${id}/${id}-1.png`}
                   />
@@ -166,7 +172,7 @@ const Card = ({
                           <NameContainer>{item.name}</NameContainer>
                         </AbsoluteContainer>
                       }
-                      <Image
+                      <Images
                         alt={`${id}`}
                         src={`/assets/images/product/${cate}/${id}/${item.src}.png`}
                       />
