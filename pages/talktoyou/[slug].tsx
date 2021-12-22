@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
 import styled from '@emotion/styled';
-import { TalkBanner } from '../../components/PageBanner';
+import { TalkSlugBanner } from '../../components/PageBanner';
 import { Address } from '../../components/Address';
 import { BlogContent } from '../../components/BlogContent';
 import union from '../../public/assets/images/union.png'
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import blogData from '../../data/blog.json';
+import { useRouter } from "next/router";
 
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -42,13 +45,34 @@ const AddressImage = styled.div`
     }
 `
 
+export interface MyComponentProps {
+  id: string;
+  title: string;
+  titleTh: string;
+  desc: string;
+  descTh: string;
+  content: string;
+  contentTh: string;
+}
+
 const TalkToYou: NextPage = () => {
+  const [blog, setBlog] = useState<MyComponentProps>();
+  const router = useRouter();
+  const { slug } = router.query
+  useEffect(() => {
+    if (slug !== undefined) {
+      if (blogData) {
+        const found = blogData.data.find(element => element.id === slug);
+        setBlog(found);
+      }
+    }
+  }, [slug]);
   return (
     <>
-      <TalkBanner text="" />
+      <TalkSlugBanner text="" img={blog?.id as string} />
       <BlogContent />
       <AddressSection>
-      <AddressImage className="d-none d-lg-block">
+        <AddressImage className="d-none d-lg-block">
           <Image
             alt="hero-bg-3"
             src={union}

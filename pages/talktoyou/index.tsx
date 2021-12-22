@@ -51,6 +51,7 @@ const Readmore = styled.a`
   line-height: 24px;
   color: #008837;
   text-decoration: none;
+  cursor: pointer;
 `
 
 const Card = styled.div`
@@ -139,7 +140,7 @@ const TalkToYou: NextPage = () => {
                       <Title>{locale === 'en' ? item.title : item.titleTh}</Title>
                       <Desc>{locale === 'en' ? item.desc : item.descTh}</Desc>
                     </div>
-                    <Link href={`/talktoyou/${item.id}`} locale={locale}><Readmore >{t.blog.readmore}</Readmore></Link>
+                    <Link href={`/talktoyou/${item.id}`} locale={locale}><Readmore>{t.blog.readmore}</Readmore></Link>
                   </ContentContainer>
                 </Card>
               </div>
