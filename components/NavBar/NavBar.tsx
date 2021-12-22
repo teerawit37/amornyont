@@ -105,6 +105,7 @@ const HotLineText = styled.div`
   font-size: 12px;
   line-height: 20px;
   color: #4F5450;
+  text-decoration: none;
 `
 const HotLineTextB = styled.div`
 font-size: 12px;

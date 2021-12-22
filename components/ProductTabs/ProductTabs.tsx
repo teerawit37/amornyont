@@ -118,7 +118,7 @@ const ProductCate = () => {
                                 img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
-                                type="Automotive Belt"
+                                type={t.product.autoBelt2}
                                 rawHTML={locale === 'en' ? item.rawHTML : item.rawHTMLth}
                             />
                         </div>
@@ -131,7 +131,7 @@ const ProductCate = () => {
                                 img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
-                                type="Industrial Belt"
+                                type={t.product.industBelt2}
                                 rawHTML={locale === 'en' ? item.rawHTML : item.rawHTMLth}
                             />
                         </div>

@@ -32,6 +32,8 @@ export default {
   product: {
     autoBelt: 'AUTOMOTIVE BELTS',
     industBelt: 'INDUSTRIAL BELTS',
+    autoBelt2: 'Automotive Belt',
+    industBelt2: 'Industrial Belt',
   },
   order: {
     title: 'QUICK ORDER',

@@ -70,6 +70,7 @@ const Desc = styled.div`
   flex: 2;
   color: #232924;
   font-size: 14px;
+  text-decoration: none;
 `
 
 const Img = styled.img`

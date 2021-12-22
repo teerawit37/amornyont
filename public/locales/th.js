@@ -32,6 +32,8 @@ export default {
   product: {
     autoBelt: 'สายพานรถยนต์',
     industBelt: 'สายพานอุตสาหกรรม',
+    autoBelt2: 'สายพานรถยนต์',
+    industBelt2: 'สายพานอุตสาหกรรม',
   },
   order: {
     title: 'สอบถามสินค้าด่วน',
