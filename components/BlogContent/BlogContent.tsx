@@ -58,30 +58,11 @@ const Title = styled.div`
   color: #000000;
   margin-bottom: 8px;
   ${mq[3]} {
-    text-align: center;
-    }
-  ${mq[3]} {
     width: 901px;
     text-align: center;
     }
 `
 
-const TextContent = styled.div`
-  font-size: 14px;
-  line-height: 22px;
-  color: #232924;
-  margin-bottom: 40px;
-`
-
-const ImageContent1 = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-`
-
-const ImageContent2 = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-`
 export interface MyComponentProps {
   id: string;
   title: string;

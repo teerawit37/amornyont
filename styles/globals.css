@@ -35,3 +35,46 @@ td {
   cursor: pointer;
   color: #008837 !important;
 }
+
+.am-mb-38 {
+  margin-bottom: 38px;
+}
+.am-mb-24 {
+  margin-bottom: 24px;
+}
+
+.text-input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #D3D4D3;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.text-input-area {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #D3D4D3;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.button {
+  max-width: 218px;
+  width: 100%;
+  padding: 9px 22px;
+  height: 44px;
+  background: #008837;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-disabled {
+  opacity: 0.3;
+}
