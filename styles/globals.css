@@ -78,3 +78,7 @@ td {
 .button-disabled {
   opacity: 0.3;
 }
+
+.am-p-5 {
+  padding: 5px;
+}

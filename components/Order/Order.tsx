@@ -144,6 +144,20 @@ const Img = styled.img`
   height: 44px;
   margin-right: 5px;
 `
+const Vi = styled.div`
+  border-left: 1px solid #fff;
+  height: 24px;
+`
+
+const ViContainer = styled.div`
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+`
+
 export interface MyComponentProps {
   page?: string;
 }
@@ -167,13 +181,21 @@ const Order = ({
               objectFit="cover"
               quality={100}
             />
+            <ViContainer className="d-none d-lg-block">
+              <div className="d-flex flex-column align-items-center">
+                <Vi />
+                <div className="text-white am-p-5">{t.order.or}</div>
+                <Vi />
+              </div>
+            </ViContainer>
             <HeroShowCase>
               <Title>{t.order.title}</Title>
               <div>{t.order.subtitle}</div>
               <div className="container mt-4">
                 <div className="row">
                   <div className="d-none d-xl-block col-xl-2" />
-                  <div className="d-none d-lg-block col-lg-6 col-xl-4 text-center">
+                  <div className="d-none d-lg-block col-lg-2 col-xl-1" />
+                  <div className="d-none d-lg-block col-lg-4 col-xl-3 text-center">
                     <Image
                       alt="qr-code"
                       src={qrcode}

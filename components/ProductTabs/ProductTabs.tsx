@@ -63,6 +63,11 @@ const Vi = styled.div`
   height: 40px;
 `
 
+const ViContainer = styled.div`
+  border-left: 1px solid #FFF;
+  height: 60px;
+`
+
 export interface MyComponentProps {
     cate: string;
     id: string;

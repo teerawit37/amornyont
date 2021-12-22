@@ -40,6 +40,7 @@ export default {
     call: 'Call: 02-224-2247',
     mail: 'Send: sales@amornyont.com',
     addfriend: 'LINE Add Friend',
+    or: 'or',
   },
   address: {
     title: 'Amornyont Limited Partnership',

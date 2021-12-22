@@ -40,6 +40,7 @@ export default {
     call: 'Call: 02-224-2247',
     mail: 'Send: sales@amornyont.com',
     addfriend: ' LINE เพิ่มเพื่อน',
+    or: 'หรือ',
   },
   address: {
     title: 'ห้างหุ้นส่วนจำกัด อมรยนต์',
