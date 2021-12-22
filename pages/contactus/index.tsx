@@ -100,7 +100,6 @@ const ContactUS: NextPage = () => {
       e.target,
       "user_e2RwPXMJEygKPv4syxgz1"
     ).then(res => {
-      console.log(res)
       router.push('/contactus/success', '/contactus/success', { locale })
     }).catch(err => console.log(err));
   }
@@ -125,7 +124,6 @@ const ContactUS: NextPage = () => {
   const handleChangeMessage = (event: any) => {
     setValueMessage(event.target.value);
   };
-
 
   return (
     <>

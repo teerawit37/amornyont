@@ -112,7 +112,6 @@ const Card = ({
   rawHTML,
 }: MyComponentProps) => {
   const [modal, setModal] = useState<boolean>(false);
-  console.log(img)
   return (
     <>
       <CardContainer onClick={() => setModal(true)}>

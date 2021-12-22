@@ -81,7 +81,6 @@ const WhoContent = () => {
 
   const { slug } = router.query
   useEffect(() => {
-    console.log(slug)
     if(slug !== undefined) {
     if (blogData) {
       const found = blogData.data.find(element => element.id === slug);

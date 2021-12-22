@@ -94,7 +94,6 @@ const ProductCate = () => {
         if (productData) {
             setAutoData(productData.automotive);
             setIndustData(productData.industrial);
-            console.log(productData)
         }
     }, [autoData]);
 
