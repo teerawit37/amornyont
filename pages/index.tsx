@@ -315,9 +315,9 @@ const Home: NextPage = () => {
                       />
                     </IconWhite>
                     <TextBlock>
-                      <WhyTitle>Good Choice</WhyTitle>
-                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                      <WhyTitle>Assured Quality</WhyTitle>
+                      <div className="d-block d-sm-none">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น การันตีโดยผู้ใช้จริง เทคโนโลยี่สูง อึด ทน</div>
+                      <div className="d-none d-sm-block">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น การันตีโดยผู้ใช้จริง เทคโนโลยี่สูง อึด ทน</div>
                     </TextBlock>
                   </WhyItemContainer>
                   <WhyItemContainer>
@@ -333,8 +333,8 @@ const Home: NextPage = () => {
                     </IconWhite>
                     <TextBlock>
                       <WhyTitle>Care Service</WhyTitle>
-                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                      <div className="d-block d-sm-none">บริการข้อมูลสายพาน จัดเตรียมสินค้าถูกต้องแม่นยำ พร้อมบริการหลังการขาย</div>
+                      <div className="d-none d-sm-block">บริการข้อมูลสายพาน จัดเตรียมสินค้าถูกต้องแม่นยำ พร้อมบริการหลังการขาย</div>
                     </TextBlock>
                   </WhyItemContainer>
                   <WhyItemContainer>
@@ -350,8 +350,8 @@ const Home: NextPage = () => {
                     </IconWhite>
                     <TextBlock>
                       <WhyTitle>Variety of products</WhyTitle>
-                      <div className="d-block d-sm-none">Amornyont have been well renowned for its long</div>
-                      <div className="d-none d-sm-block">Amornyont have been well renowned for its long business experience</div>
+                      <div className="d-block d-sm-none">สายพานหลากหลาย ของครบ จบที่เดียว (พร้อมบริการสั่งทำพิเศษ Made-to-Order)</div>
+                      <div className="d-none d-sm-block">สายพานหลากหลาย ของครบ จบที่เดียว (พร้อมบริการสั่งทำพิเศษ Made-to-Order)</div>
                     </TextBlock>
                   </WhyItemContainer>
                 </WhyUsContainer>
