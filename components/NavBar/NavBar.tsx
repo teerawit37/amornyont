@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import Link from 'next/link'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
+import { keyframes } from "@emotion/react";
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -24,7 +25,7 @@ const Nav = styled.div`
   align-items: center;
   display: flex;
   border-bottom: 1px solid #D3D4D3;
-  z-index: 100
+  z-index: 101;
   ${mq[2]} {
     padding: 0px 24px;
     }
@@ -59,8 +60,20 @@ const LinkA = styled.a`
   text-decoration: none;
   color: #000;
 `
+const scaleAnimationIn = keyframes`
+0% { 
+  opacity: 0; 
+  transform: translateY(-100%); 
+}   
+100% { 
+  opacity: 1; 
+  transform: translateY(0);
+`
 
 const LinkContainer = styled.div`
+  animation: ${scaleAnimationIn} 0.5s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
   display: flex;
   justify-content: center;
   align-items: center;

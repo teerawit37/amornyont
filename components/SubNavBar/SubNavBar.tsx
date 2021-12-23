@@ -158,7 +158,7 @@ const SubNavBar = () => {
               src="/assets/icons/Contact_Icon-mail.png"
             />
           </IconContainer>
-          <IconContainer>
+          <IconContainer href="fax:02-224-2433">
             <Img
               alt="fax"
               src="/assets/icons/Contact_Icon-fax.png"
