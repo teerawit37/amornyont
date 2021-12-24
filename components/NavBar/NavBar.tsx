@@ -192,7 +192,7 @@ const NavBar = () => {
             </LinkA>
           </Link>
         </NavHeader>
-        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText href="tel:02-224-2247">s02-224-2247</HotLineText></HotLineContainer>
+        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText href="tel:02-224-2247">02-224-2247</HotLineText></HotLineContainer>
         <NavBtn>
           <MenuIcon
             alt="menu"
