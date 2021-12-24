@@ -106,7 +106,7 @@ const ProductCate = () => {
             <Tabs>
                 <TabItem className={tabs === '1' ? 'active' : ''} onClick={() => handleActiveTabs('1')}>{t.product.autoBelt}</TabItem>
                 <div className="d-flex align-items-center">
-                    <Vi />s
+                    <Vi />
                 </div>
                 <TabItem className={tabs === '2' ? 'active' : ''} onClick={() => handleActiveTabs('2')}>{t.product.industBelt}</TabItem>
             </Tabs>
