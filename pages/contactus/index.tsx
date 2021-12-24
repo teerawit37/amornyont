@@ -124,6 +124,10 @@ const TextLink = styled.div`
     }
 `
 
+const CursorA = styled.a`
+  cursor: pointer;
+`
+
 const ContactUS: NextPage = () => {
   const router = useRouter();
   const { locale } = router;
@@ -204,7 +208,7 @@ const ContactUS: NextPage = () => {
                   />
                 </div>
               </div>
-              <a href={googleUrl} target="_blank" rel="noreferrer">
+              <CursorA href={googleUrl} target="_blank" rel="noreferrer">
                 <Image
                   alt="map-1"
                   src={map1}
@@ -212,14 +216,14 @@ const ContactUS: NextPage = () => {
                   layout="responsive"
                   quality={100}
                 />
-              </a>
+              </CursorA>
               <LoadContainer>
                 <TextA href='/assets/images/map-1.png' download><TextLink>{t.contact.load}</TextLink></TextA>
               </LoadContainer>
             </div>
             <div className="col-12 col-md-6">
               <div className="d-flex justify-content-center mb-2">{t.contact.mapImg}</div>
-              <div onClick={handleShow}>
+              <CursorA onClick={handleShow}>
                 <Image
                   alt="map-2"
                   src={map2}
@@ -227,7 +231,7 @@ const ContactUS: NextPage = () => {
                   layout="responsive"
                   quality={100}
                 />
-              </div>
+              </CursorA>
               <LoadContainer>
                 <TextA href='/assets/images/map-3.png' download><TextLink>{t.contact.load}</TextLink></TextA>
               </LoadContainer>

@@ -87,6 +87,7 @@ const TitleContain = styled.div`
 
 const LinkMap = styled.a`
   text-decoration: none;
+  cursor: pointer;
 `
 const Vi = styled.div`
   border-left: 1px solid #F2F2F2;
