@@ -112,7 +112,7 @@ const TextA = styled.a`
   color: #000;
 `
 const Img = styled.img`
-  width: 100%;
+  width: 98px;
   height: 24px;
 `
 const TextLink = styled.div`
