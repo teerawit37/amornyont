@@ -31,7 +31,12 @@ export default {
     email: 'Email',
     call: 'Phone number',
     message: 'Message',
-    send: 'Send your message'
+    send: 'Send your message',
+    successTitle: 'Succeed',
+    successP1: 'You have successfully submitted information.',
+    successP2: 'We will investigate and contact you again.',
+    successP3: 'Thank you for your contact',
+    successBtn: 'Back to Homepage'
   },
   productCate: {
     autoBelt: 'AUTOMOTIVE BELTS',

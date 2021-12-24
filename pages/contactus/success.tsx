@@ -118,13 +118,13 @@ const Success: NextPage = () => {
                             />
                         </SymbolContainer>
                         <TextContainer>
-                            <Title>Succeed</Title>
-                            <Text>You have successfully submitted information.</Text>
-                            <Text className="am-mb-24">We will investigate and contact you again.</Text>
+                            <Title>{t.contact.successTitle}</Title>
+                            <Text>{t.contact.successP1}</Text>
+                            <Text className="am-mb-24">{t.contact.successP2}</Text>
 
-                            <Text className="am-mb-38">Thank you for your contact</Text>
+                            <Text className="am-mb-38">{t.contact.successP3}</Text>
 
-                            <Link href="/" locale={locale}><LinkBack>Back to Homepage</LinkBack></Link>
+                            <Link href="/" locale={locale}><LinkBack>{t.contact.successBtn}</LinkBack></Link>
                         </TextContainer>
                     </SuccessContainer>
                 </HeroBG>
