@@ -299,7 +299,7 @@ const Home: NextPage = () => {
           />
           <HeroShowCase>
             <AbsoluteContainer>
-              <TextHero>WHY US?</TextHero>
+              <TextHero>WHY US</TextHero>
               <TextHeroSub>ครบ...ทุกเรื่องสายพาน</TextHeroSub>
               <div className="container">
                 <WhyUsContainer>
@@ -398,7 +398,7 @@ const Home: NextPage = () => {
             quality={100}
           />
         </AddressImage>
-        <div className={styles.container}>
+        <div className="container d-flex flex-column align-items-center">
           <Address />
         </div>
       </AddressSection>

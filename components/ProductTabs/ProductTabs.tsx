@@ -79,6 +79,7 @@ export interface MyComponentProps {
     img: IimageProps[];
     title: string;
     titleTH: string;
+    subtitle: string;
     rawHTML?: string;
     rawHTMLth?: string;
 }
@@ -115,6 +116,7 @@ const ProductCate = () => {
                         <div className="col-12 col-md-6 col-xl-3" key={item.id}>
                             <Card
                                 id={item.id}
+                                subtitle={item.subtitle}
                                 img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}
@@ -128,6 +130,7 @@ const ProductCate = () => {
                         <div className="col-12 col-md-6 col-xl-3" key={item.id}>
                             <Card
                                 id={item.id}
+                                subtitle={item.subtitle}
                                 img={item.img}
                                 title={locale === 'en' ? item.title : item.titleTH}
                                 cate={item.cate}

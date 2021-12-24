@@ -28,7 +28,7 @@ const Title = styled.div`
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  text-align: start;
+  text-align: center;
 `
 const TextContainer = styled.div`
   padding: 16px
@@ -74,6 +74,11 @@ const ModalTitle = styled.div`
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+`
+const ModalSubTitle = styled.div`
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 24px;
 `
 
@@ -105,6 +110,7 @@ export interface MyComponentProps {
   id: string;
   img: IimageProps[],
   title: string;
+  subtitle: string;
   type: string;
   rawHTML: string;
 }
@@ -115,6 +121,7 @@ const Card = ({
   title,
   type,
   img,
+  subtitle,
   rawHTML,
 }: MyComponentProps) => {
   const [modal, setModal] = useState<boolean>(false);
@@ -129,6 +136,7 @@ const Card = ({
         </ImageContainer>
         <TextContainer>
           <Title>{title}</Title>
+          <Title>{subtitle}</Title>
         </TextContainer>
       </CardContainer>
       {/* modal */}
@@ -141,6 +149,7 @@ const Card = ({
             <div className=" d-block d-md-none">
               <div className="row">
                 <ModalTitle>{title}</ModalTitle>
+                <ModalSubTitle>{subtitle}</ModalSubTitle>
                 <div className="col-12 mb-4">
                   <Images
                     alt={`${id}`}

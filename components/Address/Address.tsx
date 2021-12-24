@@ -53,6 +53,7 @@ const AddressContext = styled.div`
 
 const AddressRow = styled.div`
   display: flex;
+  margin-bottom: 8px;
 `
 const AdresssTitle = styled.div`
   display: flex;
@@ -68,6 +69,7 @@ const Desc = styled.div`
   color: #232924;
   font-size: 14px;
   text-decoration: none;
+  flex-direction: column;
 `
 
 const Img = styled.img`
@@ -81,10 +83,20 @@ const TitleContain = styled.div`
   flex: 1;
 `
 
+const LinkMap = styled.a`
+  text-decoration: none;
+`
+const Vi = styled.div`
+  border-left: 1px solid #F2F2F2;
+  height: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+`
 
 const Address = () => {
   const router = useRouter();
   const { locale } = router;
+  const googleUrl = "https://www.google.co.th/maps/place/%E0%B8%AB%E0%B8%88%E0%B8%81.+%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B9%8C/@13.7446514,100.5136317,17z/data=!3m1!4b1!4m5!3m4!1s0x30e299299af0b4a5:0xff7a05d62a9f558f!8m2!3d13.7446462!4d100.5158204"
   const t = locale === 'en' ? en : th;
   return (
     <>
@@ -99,7 +111,14 @@ const Address = () => {
               />
               <AdresssTitle>{t.address.addressTitle}</AdresssTitle>
             </TitleContain>
-            <Desc>{t.address.address}</Desc>
+            <Desc>
+              <div>{t.address.address}</div>
+              <div className="d-flex align-items-center">
+                <LinkMap href={googleUrl} target="_blank">Google Map</LinkMap>
+                <Vi />
+                <LinkMap href={googleUrl} target="_blank">Image Map</LinkMap>
+                </div>
+            </Desc>
           </AddressRow>
           <AddressRow>
             <TitleContain>

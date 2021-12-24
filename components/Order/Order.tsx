@@ -2,7 +2,7 @@ import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import herobg3 from '../../public/assets/images/bg-hero-3.png';
-import qrcode from '../../public/assets/images/qr-code.png';
+import qrcode from '../../public/assets/images/qr-code.jpg';
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 import { useRouter } from "next/router";
@@ -66,7 +66,7 @@ const HeroShowCaseW = styled.div`
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   width: 100%;
   margin-top: 24px;
 `
@@ -75,7 +75,12 @@ const ContactItem = styled.div`
   display: flex;
   margin-bottom: 16px;
   width: 100%;
+  margin-left: 0px;
   justify-content: center;
+  ${mq[2]} {
+    margin-left: 45px;
+    justify-content: flex-start;;
+    }
 `
 const Button = styled.a`
   display: flex;
