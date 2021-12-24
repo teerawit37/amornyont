@@ -4,7 +4,7 @@ export default {
     product: 'OUR PRODUCT',
     weare: 'WHO WE ARE',
     talk: 'TALK TO YOU',
-    contact: 'CONTACK US',
+    contact: 'CONTACT US',
     btnEN: 'EN',
     btnTH: 'TH',
   },
