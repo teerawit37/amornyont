@@ -25,7 +25,7 @@ export default {
     readmore: 'Read more'
   },
   contact: {
-    contact: 'CONTACT',
+    contact: 'CONTACT US',
     fill: 'Please fill out the information correctly.',
     name: 'Name',
     email: 'Email',
