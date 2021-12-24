@@ -36,7 +36,10 @@ export default {
     successP1: 'You have successfully submitted information.',
     successP2: 'We will investigate and contact you again.',
     successP3: 'Thank you for your contact',
-    successBtn: 'Back to Homepage'
+    successBtn: 'Back to Homepage',
+    print: 'Print',
+    load: 'Download',
+    mapImg: 'Image Map'
   },
   productCate: {
     autoBelt: 'AUTOMOTIVE BELTS',

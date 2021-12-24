@@ -1,10 +1,12 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import union from '../../public/assets/images/union.png';
+import map3 from '../../public/assets/images/map-3.png'
 import { useRouter } from "next/router";
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
+import { Modal } from 'react-bootstrap';
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -98,6 +100,11 @@ const Address = () => {
   const { locale } = router;
   const googleUrl = "https://www.google.co.th/maps/place/%E0%B8%AB%E0%B8%88%E0%B8%81.+%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B9%8C/@13.7446514,100.5136317,17z/data=!3m1!4b1!4m5!3m4!1s0x30e299299af0b4a5:0xff7a05d62a9f558f!8m2!3d13.7446462!4d100.5158204"
   const t = locale === 'en' ? en : th;
+  const [show, setShow] = useState<boolean>(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <H5>{t.address.title}</H5>
@@ -116,7 +123,7 @@ const Address = () => {
               <div className="d-flex align-items-center">
                 <LinkMap href={googleUrl} target="_blank">Google Map</LinkMap>
                 <Vi />
-                <LinkMap href={googleUrl} target="_blank">Image Map</LinkMap>
+                <LinkMap onClick={handleShow} >Image Map</LinkMap>
                 </div>
             </Desc>
           </AddressRow>
@@ -162,6 +169,17 @@ const Address = () => {
           </AddressRow>
         </AddressContext>
       </AddressContainer>
+      <Modal centered show={show} onHide={handleClose}>
+        <Modal.Body>
+          <Image
+            alt="map-3"
+            src={map3}
+            placeholder="blur"
+            layout="responsive"
+            quality={100}
+          />
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
