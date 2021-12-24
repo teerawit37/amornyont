@@ -89,44 +89,60 @@ const BlockContent = () => {
   return (
     <div className="container">
       <div className="d-flex">
-      <ContentContainer>
-        <Title>{t.whoweare.title}</Title>
-        <SubTitle>{t.whoweare.subtitle}</SubTitle>
-        <div className="row">
-          <div className="col-12 col-lg-6">
-            <ImageContent1>
-              <Image
-                alt="hero-bg-1"
-                src={who1}
-                placeholder="blur"
-                layout="responsive"
-                objectFit="cover"
-                quality={100}
-              />
-            </ImageContent1>
+        <ContentContainer>
+          <Title>{t.whoweare.title}</Title>
+          <SubTitle>{t.whoweare.subtitle}</SubTitle>
+          <div className="row">
+            <div className="col-12 col-lg-6">
+              <ImageContent1>
+                <Image
+                  alt="hero-bg-1"
+                  src={who1}
+                  placeholder="blur"
+                  layout="responsive"
+                  objectFit="cover"
+                  quality={100}
+                />
+              </ImageContent1>
+            </div>
+            <div className="col-12 col-lg-6">
+              <TextContent>
+                <div dangerouslySetInnerHTML={{
+                  __html: t.whoweare.p1
+                }}></div>
+              </TextContent>
+              <TextContent>
+                <div dangerouslySetInnerHTML={{
+                  __html: t.whoweare.p2
+                }}></div>
+              </TextContent>
+            </div>
+            <div className="col-12">
+              <ImageContent2>
+                <Image
+                  alt="hero-bg-2"
+                  src={who2}
+                  placeholder="blur"
+                  layout="responsive"
+                  objectFit="cover"
+                  quality={100}
+                />
+              </ImageContent2>
+            </div>
+            <div className="col-12">
+              <TextContent>
+                <div dangerouslySetInnerHTML={{
+                  __html: t.whoweare.p3
+                }}></div>
+              </TextContent>
+              <TextContent>
+                <div dangerouslySetInnerHTML={{
+                  __html: t.whoweare.p4
+                }}></div>
+              </TextContent>
+            </div>
           </div>
-          <div className="col-12 col-lg-6">
-            <TextContent>{t.whoweare.p1}</TextContent>
-            <TextContent>{t.whoweare.p2}</TextContent>
-          </div>
-          <div className="col-12">
-            <ImageContent2>
-              <Image
-                alt="hero-bg-2"
-                src={who2}
-                placeholder="blur"
-                layout="responsive"
-                objectFit="cover"
-                quality={100}
-              />
-            </ImageContent2>
-          </div>
-          <div className="col-12">
-            <TextContent>{t.whoweare.p3}</TextContent>
-            <TextContent>{t.whoweare.p4}</TextContent>
-          </div>
-        </div>
-      </ContentContainer>
+        </ContentContainer>
       </div>
     </div>
   );

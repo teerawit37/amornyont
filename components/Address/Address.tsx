@@ -15,7 +15,7 @@ const mq = breakpoints.map(
 const AddressContainer = styled.div`
   height: 100%;
   width: 100%;
-  max-width: 312px;
+  max-width: 322px;
   position: relative;
   padding: 14px 16px;
   align-items: center;
@@ -27,12 +27,8 @@ const AddressContainer = styled.div`
     }
   ${mq[2]} {
       width: 100%;
-      max-width: 412px;
+      max-width: 400px;
       padding: 14px 24px;
-    }
-    ${mq[3]} {
-      width: 100%;
-      max-width: 468px;
     }
 `
 const H5 = styled.h5`

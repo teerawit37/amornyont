@@ -127,18 +127,18 @@ const ContactUS: NextPage = () => {
 
   return (
     <>
-      <ContactBanner text={t.navbar.contact} />
+      <ContactBanner text={t.contact.contact} />
       <div className="container">
       <div className="d-flex">
         <FormContainer>      
           <div className="d-flex flex-column align-items-center">
-          <Text>Please fill out the information correctly.</Text>
+          <Text>{t.contact.fill}</Text>
           <Form className="d-flex flex-column" onSubmit={sendEmail}>
-            <input className="text-input" type="text" name="name" placeholder="Name" onChange={handleChangeName}/>
-            <input className="text-input" type="text" name="user_phone_number" placeholder="Phone number" onChange={handleChangeTel}/>
-            <input className="text-input" type="text" name="user_email" placeholder="Email" onChange={handleChangeEmail}/>
-            <textarea className="text-input-area" name="user_message" placeholder="Message" rows={4} onChange={handleChangeMessage}/>
-            <div className="d-flex justify-content-center w-100"><input disabled={isDisabled} className={`button ${isDisabled ? 'button-disabled' : ''}`} type="submit" value="Send your message" /></div>
+            <input className="text-input" type="text" name="name" placeholder={t.contact.name} onChange={handleChangeName}/>
+            <input className="text-input" type="text" name="user_phone_number" placeholder={t.contact.call} onChange={handleChangeTel}/>
+            <input className="text-input" type="text" name="user_email" placeholder={t.contact.email}onChange={handleChangeEmail}/>
+            <textarea className="text-input-area" name="user_message" placeholder={t.contact.message} rows={4} onChange={handleChangeMessage}/>
+            <div className="d-flex justify-content-center w-100"><input disabled={isDisabled} className={`button ${isDisabled ? 'button-disabled' : ''}`} type="submit" value={t.contact.send} /></div>
           </Form>
           </div>
         </FormContainer>

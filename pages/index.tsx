@@ -316,8 +316,8 @@ const Home: NextPage = () => {
                     </IconWhite>
                     <TextBlock>
                       <WhyTitle>Assured Quality</WhyTitle>
-                      <div className="d-block d-sm-none">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น การันตีโดยผู้ใช้จริง เทคโนโลยี่สูง อึด ทน</div>
-                      <div className="d-none d-sm-block">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น การันตีโดยผู้ใช้จริง เทคโนโลยี่สูง อึด ทน</div>
+                      <div className="d-block d-sm-none">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น เทคโนโลยีสูง อึด ทน การันตีโดยผู้ใช้จริง</div>
+                      <div className="d-none d-sm-block">สายพานมิตซูโบชิ คุณภาพญี่ปุ่น เทคโนโลยีสูง อึด ทน การันตีโดยผู้ใช้จริง</div>
                     </TextBlock>
                   </WhyItemContainer>
                   <WhyItemContainer>
@@ -332,7 +332,7 @@ const Home: NextPage = () => {
                       />
                     </IconWhite>
                     <TextBlock>
-                      <WhyTitle>Care Service</WhyTitle>
+                      <WhyTitle>Customer Care</WhyTitle>
                       <div className="d-block d-sm-none">บริการข้อมูลสายพาน จัดเตรียมสินค้าถูกต้องแม่นยำ พร้อมบริการหลังการขาย</div>
                       <div className="d-none d-sm-block">บริการข้อมูลสายพาน จัดเตรียมสินค้าถูกต้องแม่นยำ พร้อมบริการหลังการขาย</div>
                     </TextBlock>
@@ -350,8 +350,8 @@ const Home: NextPage = () => {
                     </IconWhite>
                     <TextBlock>
                       <WhyTitle>Variety of products</WhyTitle>
-                      <div className="d-block d-sm-none">สายพานหลากหลาย ของครบ จบที่เดียว (พร้อมบริการสั่งทำพิเศษ Made-to-Order)</div>
-                      <div className="d-none d-sm-block">สายพานหลากหลาย ของครบ จบที่เดียว (พร้อมบริการสั่งทำพิเศษ Made-to-Order)</div>
+                      <div className="d-block d-sm-none">สายพานหลากหลาย ของครบ จบที่เดียว และบริการสั่งทำพิเศษ Made-to-Order</div>
+                      <div className="d-none d-sm-block">สายพานหลากหลาย ของครบ จบที่เดียว และบริการสั่งทำพิเศษ Made-to-Order</div>
                     </TextBlock>
                   </WhyItemContainer>
                 </WhyUsContainer>
