@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 
-const breakpoints = [375, 768, 1024, 1440]
+const breakpoints = [320, 375, 768, 1024, 1440]
 
 const mq = breakpoints.map(
     bp => `@media (min-width: ${bp}px)`
@@ -26,7 +26,7 @@ const TabsContainer = styled.div`
 const Tabs = styled.div`
   display: flex;
   height: 100%;
-  width: 343px;
+  width: 300px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   background-color: #fff;
@@ -34,9 +34,12 @@ const Tabs = styled.div`
   margin-bottom: 20px;
   z-index: 80;
   ${mq[1]} {
+    width: 343px;
+  }
+  ${mq[2]} {
     width: 472px;
   }
-  ${mq[3]} {
+  ${mq[4]} {
     margin-top: -36px;
     width: 670px;
   }
@@ -48,11 +51,15 @@ const TabItem = styled.div`
   padding: 20px 0;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   color: #4F5450;
   cursor: pointer;
-  ${mq[3]} {
+  ${mq[1]} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  ${mq[4]} {
     font-size: 24px;
     line-height: 32px;
   }
