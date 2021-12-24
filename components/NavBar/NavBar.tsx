@@ -114,7 +114,7 @@ const HotLineContainer = styled.div`
     display: none;
   }
 `
-const HotLineText = styled.div`
+const HotLineText = styled.a`
   font-size: 12px;
   line-height: 20px;
   color: #4F5450;
@@ -192,7 +192,7 @@ const NavBar = () => {
             </LinkA>
           </Link>
         </NavHeader>
-        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText>02-224-2247</HotLineText></HotLineContainer>
+        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText href="tel:02-224-2247">s02-224-2247</HotLineText></HotLineContainer>
         <NavBtn>
           <MenuIcon
             alt="menu"
