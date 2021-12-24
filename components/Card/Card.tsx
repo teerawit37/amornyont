@@ -168,6 +168,7 @@ const Card = ({
               <div className="row">
                 <div className="col-6">
                   <ModalTitle>{title}</ModalTitle>
+                  <ModalSubTitle>{subtitle}</ModalSubTitle>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: rawHTML
