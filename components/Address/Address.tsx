@@ -17,12 +17,13 @@ const AddressContainer = styled.div`
   width: 100%;
   max-width: 322px;
   position: relative;
-  padding: 14px 16px;
+  padding: 14px 0px;
   align-items: center;
   display: flex; 
   flex-direction: column;
   ${mq[1]} {
       width: 100%;
+      padding: 14px 16px;
       max-width: 350px;
     }
   ${mq[2]} {
