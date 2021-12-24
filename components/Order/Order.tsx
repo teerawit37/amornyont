@@ -2,7 +2,7 @@ import { memo } from "react";
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import herobg3 from '../../public/assets/images/bg-hero-3.png';
-import qrcode from '../../public/assets/images/qr-code.jpg';
+import qrcode from '../../public/assets/images/qr-code-new.png';
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 import { useRouter } from "next/router";
