@@ -14,7 +14,7 @@ import icon2 from '../public/assets/icons/services.png'
 import icon3 from '../public/assets/icons/product.png'
 import amornyontcolor from '../public/assets/images/amornyont-color.png'
 import amornyontwhite from '../public/assets/images/amornyont-logo-white.png'
-import mitsuboshicolor from '../public/assets/images/mitsuboshi-color.png'
+import mitsuboshicolor from '../public/assets/images/mitsuboshi-color-new.png'
 import union from '../public/assets/images/union.png'
 import { ProductBanner } from '../components/ProductBanner';
 import { ProductCate } from '../components/ProductCate';
@@ -349,7 +349,7 @@ const Home: NextPage = () => {
                       />
                     </IconWhite>
                     <TextBlock>
-                      <WhyTitle>Variety of products</WhyTitle>
+                      <WhyTitle>Variety of Products</WhyTitle>
                       <div className="d-block d-sm-none">สายพานหลากหลาย ของครบ จบที่เดียว และบริการสั่งทำพิเศษ Made-to-Order</div>
                       <div className="d-none d-sm-block">สายพานหลากหลาย ของครบ จบที่เดียว และบริการสั่งทำพิเศษ Made-to-Order</div>
                     </TextBlock>
