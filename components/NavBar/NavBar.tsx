@@ -9,6 +9,7 @@ import Link from 'next/link'
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
 import { keyframes } from "@emotion/react";
+import { Overlay } from "../Overlay";
 
 const breakpoints = [375, 768, 1024, 1440]
 
@@ -80,7 +81,7 @@ const LinkContainer = styled.div`
   font-size: 16px;
   flex-direction: column;
   padding: 20px 0px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
   position: absolute;
   width: 100%;
   z-index: 100;
@@ -133,103 +134,120 @@ const NavBar = () => {
   const { locale, query } = router;
   const t = locale === 'en' ? en : th;
 
-  const changeLanguageEN = () => {
-    const locale = 'en';
-    if (query.slug !== undefined && router.pathname.search('[slug]')) {
-      const result_path = router.pathname.substring(0, router.pathname.length - 6);
-      const path = result_path + query.slug
-      router.push(path, path, { locale: 'en' })
-    } else {
-      const path = router.pathname
-      router.push(path, path, { locale: 'en' })
+  const path = router.pathname;
+
+  useEffect(() => {
+    setMenu(false)
+  }, [path]);
+
+  useEffect(() => {
+    if(menu){
+      document.body.style.overflow = "hidden";
+    }else {
+      document.body.style.overflow = "unset";
     }
-  }
+  }, [menu]);
 
-  const changeLanguageTH = () => {
-    const locale = 'th';
-    if (query.slug !== undefined && router.pathname.search('[slug]')) {
-      const result_path = router.pathname.substring(0, router.pathname.length - 6);
-      const path = result_path + query.slug
-      router.push(path, path, { locale: 'th' })
-    } else {
-      const path = router.pathname
-      router.push(path, path, { locale: 'th' })
-
-    }
+const changeLanguageEN = () => {
+  const locale = 'en';
+  if (query.slug !== undefined && router.pathname.search('[slug]')) {
+    const result_path = router.pathname.substring(0, router.pathname.length - 6);
+    const path = result_path + query.slug
+    router.push(path, path, { locale: 'en' })
+  } else {
+    const path = router.pathname
+    router.push(path, path, { locale: 'en' })
   }
+}
 
-  const goTo = (path: string) => {
-    setMenu(false);
-    router.push(path)
-    router.push(path, path, { locale: locale })
+const changeLanguageTH = () => {
+  const locale = 'th';
+  if (query.slug !== undefined && router.pathname.search('[slug]')) {
+    const result_path = router.pathname.substring(0, router.pathname.length - 6);
+    const path = result_path + query.slug
+    router.push(path, path, { locale: 'th' })
+  } else {
+    const path = router.pathname
+    router.push(path, path, { locale: 'th' })
+
   }
-  return (
-    <>
-      <Nav>
-        <NavHeader>
-          <Link href="/" locale={locale}>
-            <LinkA className="d-block d-lg-none">
-              <Image
-                alt="logo"
-                src={logoMB}
-                quality={100}
-                placeholder="blur"
-                width={57}
-                height={37}
-              />
-            </LinkA>
-          </Link>
-          <Link href="/" locale={locale}>
-            <LinkA className="d-none d-lg-block">
-              <Image
-                alt="logo"
-                src={logo}
-                quality={100}
-                placeholder="blur"
-                width={194}
-                height={26}
-              />
-            </LinkA>
-          </Link>
-        </NavHeader>
-        <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText href="tel:02-224-2247">02-224-2247</HotLineText></HotLineContainer>
-        <NavBtn>
-          <MenuIcon
-            alt="menu"
-            src={icon}
-            quality={100}
-            width={38}
-            height={38}
-            onClick={() => setMenu(!menu)}
-          />
-        </NavBtn>
-        <NavLink>
-          <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></Link>
-          <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></Link>
-          <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></Link>
-          <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></Link>
-          <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
-          <SpaceButton>|</SpaceButton>
-          <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
-        </NavLink>
-      </Nav>
-      {menu &&
-        <LinkContainer>
-          <div onClick={() => goTo("/product")} ><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></div>
-          <div onClick={() => goTo("/whoweare")} ><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></div>
-          <div onClick={() => goTo("/talktoyou")} ><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></div>
-          <div onClick={() => goTo("/contactus")} ><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></div>
-          <LinkA>
-            <div className="d-flex">
-              <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
-              <SpaceButton>|</SpaceButton>
-              <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
-            </div>
+}
+
+const goTo = (path: string) => {
+  setMenu(false);
+  router.push(path)
+  router.push(path, path, { locale: locale })
+}
+return (
+  <>
+    <Nav>
+      <NavHeader>
+        <Link href="/" locale={locale}>
+          <LinkA className="d-block d-lg-none im-logo-mt">
+            <Image
+              alt="logo"
+              src={logoMB}
+              quality={100}
+              placeholder="blur"
+              width={57}
+              height={37}
+            />
           </LinkA>
-        </LinkContainer>
-      }
-    </>
-  );
+        </Link>
+        <Link href="/" locale={locale}>
+          <LinkA className="d-none d-lg-block im-logo-mt">
+            <Image
+              alt="logo"
+              src={logo}
+              quality={100}
+              placeholder="blur"
+              width={194}
+              height={26}
+            />
+          </LinkA>
+        </Link>
+      </NavHeader>
+      <HotLineContainer><HotLineTextB>HOTLINE</HotLineTextB><HotLineText href="tel:02-224-2247">02-224-2247</HotLineText></HotLineContainer>
+      <NavBtn>
+        <MenuIcon
+          alt="menu"
+          src={icon}
+          quality={100}
+          width={38}
+          height={38}
+          onClick={() => setMenu(!menu)}
+        />
+      </NavBtn>
+      <NavLink>
+        <Link href="/product" locale={locale}><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></Link>
+        <Link href="/whoweare" locale={locale}><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></Link>
+        <Link href="/talktoyou" locale={locale}><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></Link>
+        <Link href="/contactus" locale={locale}><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></Link>
+        <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
+        <SpaceButton>|</SpaceButton>
+        <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
+      </NavLink>
+    </Nav>
+    {menu &&
+    <>
+      <Overlay className="zindex-1" onClick={() => setMenu(false)}></Overlay>
+      <LinkContainer>
+        <div onClick={() => goTo("/product")} ><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></div>
+        <div onClick={() => goTo("/whoweare")} ><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></div>
+        <div onClick={() => goTo("/talktoyou")} ><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></div>
+        <div onClick={() => goTo("/contactus")} ><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></div>
+        <LinkA>
+          <div className="d-flex">
+            <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
+            <SpaceButton>|</SpaceButton>
+            <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
+          </div>
+        </LinkA>
+      </LinkContainer>
+      </>
+    }
+  </>
+);
 }
 
 export default memo(NavBar);

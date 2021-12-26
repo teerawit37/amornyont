@@ -37,9 +37,9 @@ export default {
     successP2: 'เราจะรีบตรวจสอบ และติดต่อกลับไปอย่างเร็วที่สุด',
     successP3: 'ขอบคุณสำหรับการติดต่อ',
     successBtn: 'กลับไปหน้าแรก',
-    print: 'พิมพ์',
-    load: 'บันทึก',
-    mapImg: 'แผนที่'
+    gotomap: 'ไปที่แผนที่',
+    load: 'บันทึกรูปแผนที่',
+    mapImg: 'แผนที่รูปขยาย'
   },
   productCate: {
     autoBelt: 'สายพานรถยนต์',
@@ -73,6 +73,8 @@ export default {
     fax: '02-224-2433',
     mailTitle: 'อีเมล:',
     mail: 'sales@amornyont.com',
+    googlemap: 'แผนที่ Google',
+    imagemap: 'แผนที่รูปขยาย'
   },
   whoweare: {
     title: 'ห้างหุ้นส่วนจำกัด อมรยนต์',

@@ -18,7 +18,6 @@ const mq = breakpoints.map(
 )
 
 const Container = styled.div`
-  padding: 0 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -122,9 +122,9 @@ const Address = () => {
             <Desc>
               <div>{t.address.address}</div>
               <div className="d-flex align-items-center">
-                <LinkMap href={googleUrl} target="_blank">Google Map</LinkMap>
+                <LinkMap href={googleUrl} target="_blank">{t.address.googlemap}</LinkMap>
                 <Vi />
-                <LinkMap onClick={handleShow} >Image Map</LinkMap>
+                <LinkMap onClick={handleShow} >{t.address.imagemap}</LinkMap>
                 </div>
             </Desc>
           </AddressRow>

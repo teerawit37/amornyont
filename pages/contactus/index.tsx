@@ -218,7 +218,7 @@ const ContactUS: NextPage = () => {
                 />
               </CursorA>
               <LoadContainer>
-                <TextA href={googleUrl} target="_blank" rel="noreferrer"><TextLink>{t.contact.load}</TextLink></TextA>
+                <TextA href={googleUrl} target="_blank" rel="noreferrer"><TextLink>{t.contact.gotomap}</TextLink></TextA>
               </LoadContainer>
             </div>
             <div className="col-12 col-md-6">

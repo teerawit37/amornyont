@@ -9,11 +9,14 @@ const OverlayBG = styled.div`
   z-index: 1;
   opacity: 0.4;
 `
+interface OverlayProps {
+  onClick?: () => void,
+  className?: string,
+}
 
-
-const Overlay = () => {
+const Overlay = ({ onClick, className = '' } : OverlayProps) => {
   return (
-    <OverlayBG />
+    <OverlayBG className={className} onClick={onClick} />
   );
 }
 

@@ -37,8 +37,8 @@ export default {
     successP2: 'We will investigate and contact you again.',
     successP3: 'Thank you for your contact',
     successBtn: 'Back to Homepage',
-    print: 'Print',
-    load: 'Download',
+    gotomap: 'Go to Map',
+    load: 'Download Map',
     mapImg: 'Image Map'
   },
   productCate: {
@@ -73,6 +73,8 @@ export default {
     fax: '02-224-2433',
     mailTitle: 'Email:',
     mail: 'sales@amornyont.com',
+    googlemap: 'Google Map',
+    imagemap: 'Image Map'
   },
   whoweare: {
     title: 'Amornyont Limited Partnership.',

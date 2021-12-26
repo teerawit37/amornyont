@@ -43,6 +43,16 @@ td {
 .am-mb-24 {
   margin-bottom: 24px;
 }
+.im-logo-mt {
+  margin-top: 5px !important;
+}
+.zindex-1 {
+  z-index: 81 !important;
+  cursor: pointer;
+  height: 100%;
+  position: fixed !important; 
+  overflow-y:scroll !important;
+}
 
 .text-input {
   width: 100%;
