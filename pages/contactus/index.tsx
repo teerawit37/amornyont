@@ -183,7 +183,7 @@ const ContactUS: NextPage = () => {
       <div className="container">
         <div className="d-flex">
           <FormContainer>
-            <div className="d-flex flex-column align-items-center">
+            <div className="w-100 d-flex flex-column align-items-center">
               <Text>{t.contact.fill}</Text>
               <Form className="d-flex flex-column" onSubmit={sendEmail}>
                 <input className="text-input" type="text" name="name" placeholder={t.contact.name} onChange={handleChangeName} />
