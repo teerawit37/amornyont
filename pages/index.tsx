@@ -81,6 +81,16 @@ const ProductLogo = styled.div`
   width: 231px;
   padding: 24px 0;
   justify-content: space-between;
+  ${mq[1]} {
+    width: 240px;
+    margin-right: 45px;
+  }
+  ${mq[2]} {
+    margin-right: 40px;
+  }
+  ${mq[3]} {
+    margin-right: 40px;
+  }
   `
 
 const AddressSection = styled.section`
@@ -177,7 +187,7 @@ const WhyItemContainer = styled.div`
   font-weight: 400;
   line-height: 24px;
   text-align: start;
-  max-width: 305px;
+  max-width: 310px;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
@@ -187,7 +197,7 @@ const WhyItemContainer = styled.div`
   ${mq[2]} {
     flex-direction: column;
     text-align: center;
-    max-width: 298px;
+    max-width: 305px;
     }
 `
 const TextBlock = styled.div`
