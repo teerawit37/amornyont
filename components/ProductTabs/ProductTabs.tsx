@@ -91,13 +91,22 @@ export interface MyComponentProps {
     rawHTMLth?: string;
 }
 
-const ProductCate = () => {
+export interface TabsProps {
+    active?: string;
+}
+
+const ProductCate = ({active = '1'}: TabsProps) => {
     const [autoData, setAutoData] = useState<MyComponentProps[]>([]);
     const [industData, setIndustData] = useState<MyComponentProps[]>([]);
     const [tabs, setActiveTabs] = useState<string>('1');
     const router = useRouter();
     const { locale } = router;
     const t = locale === 'en' ? en : th;
+
+    useEffect(() => {
+        setActiveTabs(active)
+    }, [active]);
+
     useEffect(() => {
         if (productData) {
             setAutoData(productData.automotive);

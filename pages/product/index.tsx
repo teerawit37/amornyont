@@ -9,6 +9,7 @@ import union from '../../public/assets/images/union.png'
 import Image from 'next/image';
 import en from '../../public/locales/en';
 import th from '../../public/locales/th';
+import { useEffect, useState } from 'react';
 
 
 const breakpoints = [375, 768, 1024, 1440]
@@ -47,13 +48,21 @@ const AddressImage = styled.div`
 
 const Product: NextPage = () => {
   const router = useRouter();
-  const { locale } = router;
-  const t = locale === 'en' ? en : th
+  const [active, setActive] = useState<string>('1');
+  const { locale, query, pathname } = router;
+  const t = locale === 'en' ? en : th;
+
+  useEffect(() => {
+    if(query?.cate === 'indust'){
+      setActive('2')
+    }
+  }, [pathname])
+  
   return (
     <>
       <ProductBanner text={t.navbar.product} />
       <div className="container">
-        <ProductTabs />
+        <ProductTabs active={active} />
       </div>
       <Order page='product' />
       <AddressSection>

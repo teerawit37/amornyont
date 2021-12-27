@@ -51,7 +51,7 @@ td {
   cursor: pointer;
   height: 100%;
   position: fixed !important; 
-  overflow-y:scroll !important;
+  overflow-y:hidden !important;
   scrollbar-width: none;
 }
 

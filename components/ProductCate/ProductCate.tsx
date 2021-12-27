@@ -108,8 +108,9 @@ const ProductCate = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : th;
 
-  const handleClick = () => {
-    router.push('/product', '/product', { locale: locale })
+  const handleClick = (cate: string) => {
+    // router.push('/product', '/product', { locale: locale })
+    router.push({ pathname: '/product', query: { cate: cate } }, '/product', { locale: locale })
   }
   return (
     <>
@@ -128,7 +129,7 @@ const ProductCate = () => {
           <TextHero>
             <TextContainer>
               <div>{t.productCate.autoBelt}</div>
-              <Button onClick={() => handleClick()}>{t.productCate.btnMore}</Button>
+              <Button onClick={() => handleClick('auto')}>{t.productCate.btnMore}</Button>
             </TextContainer>
           </TextHero>
         </BG1>
@@ -146,7 +147,7 @@ const ProductCate = () => {
           <TextHero>
             <TextContainer>
               <div>{t.productCate.industBelt}</div>
-              <Button onClick={() => handleClick()}>{t.productCate.btnMore}</Button>
+              <Button onClick={() => handleClick('indust')}>{t.productCate.btnMore}</Button>
             </TextContainer>
           </TextHero>
         </BG2>

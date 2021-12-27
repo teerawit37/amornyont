@@ -160,6 +160,7 @@ const defaultStyle = {
 const defaultStyleOverlay = {
   transition: `opacity ${duration}ms ease-in-out`,
   opacity: 0,
+  display: 'none'
 }
 
 const transitionStyles: { [id: string]: React.CSSProperties } = {
@@ -170,10 +171,10 @@ const transitionStyles: { [id: string]: React.CSSProperties } = {
 };
 
 const transitionStylesOverlay: { [id: string]: React.CSSProperties } = {
-  entering: { opacity: 0.4 },
-  entered: { opacity: 0.4 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
+  entering: { opacity: 0.4, display: 'block' },
+  entered: { opacity: 0.4, display: 'block' },
+  exiting: { opacity: 0, display: 'none' },
+  exited: { opacity: 0, display: 'none' },
 };
 
 const NavBar = () => {
@@ -304,24 +305,6 @@ const NavBar = () => {
           </LinkContainer>
         )}
       </Transition>
-      {/* {menu &&
-        <>
-          <Overlay className="zindex-1" onClick={() => setMenu(false)}></Overlay>
-          <LinkContainer>
-            <div onClick={() => goTo("/product")} ><LinkA className={router.pathname === '/product' ? "active" : 'link'}>{t.navbar.product}</LinkA></div>
-            <div onClick={() => goTo("/whoweare")} ><LinkA className={router.pathname === '/whoweare' ? "active" : 'link'}>{t.navbar.weare}</LinkA></div>
-            <div onClick={() => goTo("/talktoyou")} ><LinkA className={router.pathname === '/talktoyou' ? "active" : 'link'}>{t.navbar.talk}</LinkA></div>
-            <div onClick={() => goTo("/contactus")} ><LinkA className={router.pathname === '/contactus' ? "active" : 'link'}>{t.navbar.contact}</LinkA></div>
-            <LinkA>
-              <div className="d-flex">
-                <ChangeLangButton className={locale !== 'en' ? "active" : 'link'} onClick={() => changeLanguageTH()}>{t.navbar.btnTH}</ChangeLangButton>
-                <SpaceButton>|</SpaceButton>
-                <ChangeLangButton className={locale === 'en' ? "active" : 'link'} onClick={() => changeLanguageEN()}>{t.navbar.btnEN}</ChangeLangButton>
-              </div>
-            </LinkA>
-          </LinkContainer>
-        </>
-      } */}
     </>
   );
 }
