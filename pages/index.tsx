@@ -19,6 +19,7 @@ import union from '../public/assets/images/union.png'
 import { ProductBanner } from '../components/ProductBanner';
 import { ProductCate } from '../components/ProductCate';
 import { Overlay } from '../components/Overlay';
+import { ZoilBanner } from '../components/ZoilBanner';
 const breakpoints = [375, 768, 1024, 1440]
 
 const mq = breakpoints.map(
@@ -66,14 +67,15 @@ const WhySection = styled.section`
 const ProductSection = styled.section`
   display: flex;
   flex-direction: column;
-  height: 1018px;
+  // height: 1018px;
+  height: 100%;
   width: 100%;
-  ${mq[1]} {
-    height: 652px;
-    }
-  ${mq[3]} {
-    height: 758px;
-    }
+  // ${mq[1]} {
+  //   height: 852px;
+  //   }
+  // ${mq[3]} {
+  //   height: 958px;
+  //   }
 `
 const ProductLogo = styled.div`
   display: flex;
@@ -394,6 +396,7 @@ const Home: NextPage = () => {
             </ProductLogo>
             <ProductCate />
           </Container>
+          <ZoilBanner />
         </div>
       </ProductSection>
       <Order />
