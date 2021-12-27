@@ -162,14 +162,14 @@ const defaultStyleOverlay = {
   opacity: 0,
 }
 
-const transitionStyles = {
+const transitionStyles: { [id: string]: React.CSSProperties } = {
   entering: { opacity: 1, transform: 'translateY(0)'},
   entered: { opacity: 1, transform: 'translateY(0)' },
   exiting: { opacity: 0, transform: 'translateY(-100%)'},
   exited: { opacity: 0, transform: 'translateY(-100%)'},
 };
 
-const transitionStylesOverlay = {
+const transitionStylesOverlay: { [id: string]: React.CSSProperties } = {
   entering: { opacity: 0.4 },
   entered: { opacity: 0.4 },
   exiting: { opacity: 0 },
@@ -281,7 +281,7 @@ const NavBar = () => {
           <Overlay style={{
             ...defaultStyleOverlay,
             ...transitionStylesOverlay[state]
-          }} className="zindex-1" onClick={() => setMenu(false)}></Overlay>
+          }} className="zindex-1" onClick={() => setMenu(false)}>{state}</Overlay>
         )}
       </Transition>
       <Transition in={menu} timeout={duration}>
