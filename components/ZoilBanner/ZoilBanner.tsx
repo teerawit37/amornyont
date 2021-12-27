@@ -88,7 +88,7 @@ const HeadLineContainer = styled.div`
   padding: 8px 24px;
   border-radius: 24px;
   margin-top: 12px;
-  background-color: red;
+  background-color: #008837;
   color: white;
 `
 
