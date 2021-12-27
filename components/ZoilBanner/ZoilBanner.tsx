@@ -74,7 +74,6 @@ const ModalTitle = styled.div`
   line-height: 32px;
 `
 const ModalSubTitle = styled.div`
-  font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 24px;
