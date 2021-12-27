@@ -140,7 +140,7 @@ const SubNavBar = () => {
         <NavLink>
           <Text>HOTLINE 02-224-2247 </Text>
           <Text>|</Text>
-          <IconContainer href="http://line.me/ti/p/@amornyont">
+          <IconContainer href="http://line.me/ti/p/@amornyont" target="_blank">
             <Img
               alt="line"
               src="/assets/icons/Contact_Icon-line.png"
@@ -158,10 +158,10 @@ const SubNavBar = () => {
               src="/assets/icons/Contact_Icon-mail.png"
             />
           </IconContainer>
-          <IconContainer href="fax:02-224-2433">
+          <IconContainer href="https://www.paygofax.com/?name=Amornyont&company=Amornyont&fax=022242433" target="_blank">
             <Img
               alt="fax"
-              src="/assets/icons/Contact_Icon-fax.png"
+              src="/assets/icons/Contact_Icon-fax-new.png"
             />
           </IconContainer>
         </NavLink>
