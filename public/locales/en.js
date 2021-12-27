@@ -44,7 +44,7 @@ export default {
   productCate: {
     autoBelt: 'AUTOMOTIVE BELTS',
     industBelt: 'INDUSTRIAL BELTS',
-    btnMore: 'VIEW MORE',
+    btnMore: 'View More',
   },
   product: {
     autoBelt: 'AUTOMOTIVE BELTS',
@@ -74,7 +74,8 @@ export default {
     mailTitle: 'Email:',
     mail: 'sales@amornyont.com',
     googlemap: 'Google Map',
-    imagemap: 'Image Map'
+    imagemap: 'Image Map',
+    load: 'Download Map',
   },
   whoweare: {
     title: 'Amornyont Limited Partnership.',

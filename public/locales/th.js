@@ -74,7 +74,8 @@ export default {
     mailTitle: 'อีเมล:',
     mail: 'sales@amornyont.com',
     googlemap: 'แผนที่ Google',
-    imagemap: 'แผนที่รูปขยาย'
+    imagemap: 'แผนที่รูปขยาย',
+    load: 'บันทึกรูปแผนที่',
   },
   whoweare: {
     title: 'ห้างหุ้นส่วนจำกัด อมรยนต์',

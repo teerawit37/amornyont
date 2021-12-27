@@ -124,6 +124,11 @@ const TextLink = styled.div`
     }
 `
 
+const TextLinkA = styled.div`
+  font-size: 16px;
+  margin-top: 14px;
+`
+
 const CursorA = styled.a`
   cursor: pointer;
 `
@@ -265,6 +270,9 @@ const ContactUS: NextPage = () => {
             layout="responsive"
             quality={100}
           />
+          <LoadContainer>
+            <TextA href='/assets/images/map-3.png' download><TextLinkA>{t.contact.load}</TextLinkA></TextA>
+          </LoadContainer>
         </Modal.Body>
       </Modal>
     </>

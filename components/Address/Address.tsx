@@ -95,7 +95,23 @@ const Vi = styled.div`
   margin-left: 10px;
   margin-right: 10px;
 `
+const LoadContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
 
+const TextA = styled.a`
+  text-decoration: none;
+  color: #000;
+`
+
+const TextLink = styled.div`
+  font-size: 16px;
+  margin-top: 14px;
+  ${mq[1]} {
+    margin-bottom: 0px;
+    }
+`
 const Address = () => {
   const router = useRouter();
   const { locale } = router;
@@ -179,6 +195,9 @@ const Address = () => {
             layout="responsive"
             quality={100}
           />
+          <LoadContainer>
+            <TextA href='/assets/images/map-3.png' download><TextLink>{t.contact.load}</TextLink></TextA>
+          </LoadContainer>
         </Modal.Body>
       </Modal>
     </>
