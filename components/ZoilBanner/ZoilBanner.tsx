@@ -123,7 +123,7 @@ const ZoilBanner = () => {
           <ModalContainer>
             <div className=" d-block d-lg-none">
               <div className="row">
-                <ModalTitle>ซอยล์</ModalTitle>
+                <ModalTitle>Zoil (ซอยล์)</ModalTitle>
                 <ModalSubTitle>สะอาด เงางามเหมือนใหม่</ModalSubTitle>
                 <div className="col-12 mb-4">
                   <Images
@@ -151,7 +151,7 @@ const ZoilBanner = () => {
             <div className=" d-none d-lg-block">
               <div className="row">
                 <div className="col-6">
-                  <ModalTitle>ซอยล์</ModalTitle>
+                  <ModalTitle>Zoil (ซอยล์)</ModalTitle>
                   <ModalSubTitle>สะอาด เงางามเหมือนใหม่</ModalSubTitle>
                   <div>
                     <p><strong>วิธีการใช้งาน</strong></p>
