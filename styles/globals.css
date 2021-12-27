@@ -52,6 +52,7 @@ td {
   height: 100%;
   position: fixed !important; 
   overflow-y:scroll !important;
+  scrollbar-width: none;
 }
 
 .text-input {
@@ -92,4 +93,19 @@ td {
 
 .am-p-5 {
   padding: 5px;
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
 }
