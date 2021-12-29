@@ -54,7 +54,7 @@ export default {
   },
   order: {
     title: 'สอบถามสินค้าด่วน',
-    subtitle: '24/7 advice service',
+    subtitle: 'เช็คสต๊อค ราคา ปัญหาการใช้งาน',
     line: 'Add: @amornyont',
     call: 'Call: 02-224-2247',
     mail: 'Send: sales@amornyont.com',

@@ -54,7 +54,7 @@ export default {
   },
   order: {
     title: 'QUICK ORDER',
-    subtitle: '24/7 advice service',
+    subtitle: 'Product Inquiry & Support',
     line: 'Add: @amornyont',
     call: 'Call: 02-224-2247',
     mail: 'Send: sales@amornyont.com',
