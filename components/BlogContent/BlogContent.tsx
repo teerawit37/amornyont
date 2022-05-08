@@ -1324,6 +1324,12 @@ const WhoContent = () => {
             :
             locale === 'en' ? blog3En() : blog3th()
           }
+          {/* {blog !== undefined &&
+            blog.id === 'blog-4' ?
+            locale === 'en' ? blog3En() : blog3th()
+            :
+            ''
+          } */}
         </ContentContainer>
       </div>
     </div >
@@ -1331,3 +1337,13 @@ const WhoContent = () => {
 }
 
 export default memo(WhoContent);
+
+// {
+        //     "id": "blog-4",
+        //     "title": "What is RECMF belt with Gold mark? Come say hello to our Gold Mark.",
+        //     "titleTh": "ทำความรู้จักกับสายพาน RECMF B17 mm. และ C22 mm. รุ่นพิเศษ ฉลากสีทองที่นี่!",
+        //     "desc": "These belts are made of well-qualified materials. The highlight here is...",
+        //     "descTh": "สายพานรุ่นฉลากสีทองมี 2 ชนิด คือ RECMF หน้ากว้าง 17 มม. และ RECMF หน้ากว้าง 22...",
+        //     "content": "",
+        //     "contentTh": ""
+        // }
